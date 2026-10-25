@@ -1,0 +1,21 @@
+---
+import { ui, type Locale } from '../data/site';
+interface Props { locale: Locale; mode: 'growth' | 'grain' }
+const { locale, mode } = Astro.props; const c = ui[locale];
+const labels = mode === 'growth' ? [c.seedling, c.tillering, c.panicle] : [c.paddy, c.brown, c.white];
+---
+<div class={`scene-widget scene-${mode}`} data-scene={mode}>
+  <div class="scene-viewport">
+    <div class="scene-fallback" data-scene-fallback><div class={`fallback-${mode}`} aria-hidden="true"><i></i><i></i><i></i></div><p>{mode === 'grain' ? c.modelFallback : c.cultivationBody}</p></div>
+    <canvas aria-hidden="true" tabindex="-1"></canvas>
+    <button type="button" class="scene-motion" data-scene-motion aria-pressed="true"><span data-motion-label>{c.pause}</span><span aria-hidden="true">Ⅱ</span></button>
+    <button type="button" class="scene-activate button" data-scene-activate>{locale === 'ta' ? 'முப்பரிமாணத்தில் பாருங்கள்' : 'Explore in 3D'}<span aria-hidden="true">↗</span></button>
+    <span class="scene-watermark" aria-hidden="true">{mode === 'grain' ? 'ORYZA SATIVA' : 'GROWING WITH NATURE'}</span>
+    <span class="scene-index" aria-hidden="true">01 — 03</span>
+  </div>
+  <div class="scene-controls" role="group" aria-label={mode === 'growth' ? c.growthLabel : c.millingTag}>
+    {labels.map((label, index) => <button type="button" data-scene-stage={index} aria-pressed={index === 0 ? 'true' : 'false'}><span>0{index + 1}</span>{label}</button>)}
+  </div>
+  {mode === 'grain' && <><p class="scene-description" aria-live="polite" data-stage-description data-descriptions={JSON.stringify(c.stageDescriptions)}>{c.stageDescriptions[0]}</p><label class="rotate-control">{c.rotate}<input type="range" min="0" max="360" value="0" step="5" data-rotate /></label></>}
+  <p class="caption">{c.illustration}</p>
+</div>

@@ -1,0 +1,52 @@
+---
+import '@fontsource-variable/fraunces';
+import '@fontsource-variable/fraunces/wght-italic.css';
+import '@fontsource-variable/manrope';
+import '../styles/fonts.css';
+import displayFont from '@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2?url';
+import bodyFont from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
+import tamilFont from '@fontsource-variable/noto-sans-tamil/files/noto-sans-tamil-tamil-wght-normal.woff2?url';
+import '../styles/global.css';
+import { business, nav, pages, pathFor, t, ui, type Locale, type PageKey } from '../data/site';
+import Mark from '../components/Mark.astro';
+interface Props { locale: Locale; page: PageKey; title: string; description: string }
+const { locale, page, title, description } = Astro.props; const c = ui[locale];
+const alternate = locale === 'en' ? 'ta' : 'en';
+const canonical = Astro.site ? new URL(pathFor(page, locale), Astro.site).href : null;
+const structuredData = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Valluvar — Thirumurugan Modern Rice Mill', foundingDate: '1992', address: { '@type': 'PostalAddress', streetAddress: 'Palani Road', addressLocality: 'Dharapuram', addressRegion: 'Tamil Nadu', addressCountry: 'IN' } };
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — Valluvar Rice Mill</title><meta name="description" content={description} />
+    <meta name="theme-color" content="#153e32" /><meta name="robots" content={business.reviewBuild ? 'noindex, nofollow' : 'index, follow'} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href={bodyFont} as="font" type="font/woff2" crossorigin="anonymous" />
+    {locale === 'ta' && <link rel="preload" href={tamilFont} as="font" type="font/woff2" crossorigin="anonymous" />}
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="alternate" hreflang="en" href={new URL(pathFor(page, 'en'), Astro.site).href} /><link rel="alternate" hreflang="ta" href={new URL(pathFor(page, 'ta'), Astro.site).href} /><link rel="alternate" hreflang="x-default" href={new URL(pathFor(page, 'en'), Astro.site).href} />
+    <meta property="og:type" content="website" /><meta property="og:title" content={`${title} — Valluvar`} /><meta property="og:description" content={description} /><meta property="og:image" content={new URL('/media/paddy.webp', Astro.site).href} /><meta property="og:url" content={canonical} /><meta property="og:locale" content={locale === 'ta' ? 'ta_IN' : 'en_IN'} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body data-locale={locale}>
+    <a class="skip-link" href="#main">{c.skip}</a>
+    <header class="site-header">
+      <a href={pathFor('home', locale)} class="brand"><Mark /><span><span class="wordmark">VALLUVAR<span class="brand-dot" aria-hidden="true">✦</span></span><span class="brand-sub">{locale === 'ta' ? 'மண்ணின் நன்மை' : 'GOODNESS, FROM THE GROUND UP'}</span></span></a>
+      <nav id="main-nav" aria-label={locale === 'ta' ? 'முதன்மை வழிசெலுத்தல்' : 'Main navigation'}>
+        {pages.filter(p => p !== 'home' && p !== 'contact').map(p => <a href={pathFor(p, locale)} aria-current={page === p ? 'page' : undefined}>{t(nav[p], locale)}</a>)}
+        <a class="mobile-contact" href={pathFor('contact', locale)}>{t(nav.contact, locale)}</a>
+      </nav>
+      <div class="header-actions"><a class="language-switch" href={pathFor(page, alternate)} lang={alternate} hreflang={alternate} aria-label={locale === 'en' ? 'தமிழ் — Switch to Tamil' : 'EN — Switch to English'}>{locale === 'en' ? 'தமிழ்' : 'EN'}</a><a class="header-enquiry" href={pathFor('contact', locale)}>{c.enquiry}<span aria-hidden="true">↗</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label={c.menu}><span></span><span></span></button></div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="footer-top"><div><a class="footer-wordmark" href={pathFor('home', locale)}>VALLUVAR<span>✦</span></a><p>{c.footerNote}</p></div><div class="footer-links">{pages.filter(p => p !== 'home').map(p => <a href={pathFor(p, locale)}>{t(nav[p], locale)}</a>)}</div><div class="footer-location"><p class="eyebrow">{c.findUs}</p><p>{locale === 'ta' ? 'திருமுருகன் மாடர்ன் ரைஸ் மில்' : business.legalName}<br />{locale === 'ta' ? 'பழனி சாலை, தாராபுரம்' : 'Palani Road, Dharapuram'}<br />{locale === 'ta' ? 'தமிழ்நாடு, இந்தியா' : 'Tamil Nadu, India'}</p></div></div>
+      <div class="footer-bottom"><span>© {new Date().getFullYear()} Valluvar</span><span>{c.stockNote}</span><a href={pathFor(page, alternate)} lang={alternate}>{locale === 'en' ? 'தமிழில் பார்க்க' : 'View in English'} ↗</a></div>
+      {business.reviewBuild && <div class="preview-note"><strong>{c.preview}</strong><span>{c.previewNote}</span></div>}
+    </footer>
+    <script>import '../scripts/site';</script>
+  </body>
+</html>

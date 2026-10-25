@@ -1,0 +1,131 @@
+[
+  {
+    "id": 10783184,
+    "name": "planting",
+    "creator": "Dr.Vivasayam YouTube Channel",
+    "page": "https://www.pexels.com/video/people-on-rice-field-10783184/",
+    "download": "https://videos.pexels.com/video-files/10783184/10783184-hd_1920_1080_25fps.mp4",
+    "start": 8,
+    "length": 10,
+    "description": "Farm workers transplanting rice seedlings into a flooded paddy field.",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "video": "/media/planting.mp4",
+    "poster": "/media/planting.webp",
+    "bytes": 2626060,
+    "posterBytes": 341060,
+    "edits": "Excerpt from 8 seconds, up to 10 seconds; 1280px wide H.264, 24fps, CRF29, no audio; 1600px WebP poster.",
+    "usage": "Illustrative stock footage; not documented client farms, staff, or premises.",
+    "inspection": "Three contact frames retained in temporary source directory for manual review.",
+    "crf": 29,
+    "posterVariants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "/media/planting-640.webp",
+        "bytes": 64848
+      },
+      {
+        "width": 960,
+        "height": 540,
+        "src": "/media/planting-960.webp",
+        "bytes": 131912
+      }
+    ]
+  },
+  {
+    "id": 1557401,
+    "name": "paddy",
+    "creator": "Sameera Madusanka",
+    "page": "https://www.pexels.com/video/rice-ready-to-be-harvested-1557401/",
+    "download": "https://videos.pexels.com/video-files/1557401/1557401-hd_1920_1080_30fps.mp4",
+    "start": 0,
+    "length": 8,
+    "description": "Mature rice panicles and green leaves moving in the breeze.",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "video": "/media/paddy.mp4",
+    "poster": "/media/paddy.webp",
+    "bytes": 688578,
+    "posterBytes": 75918,
+    "edits": "Excerpt from 0 seconds, up to 8 seconds; 1280px wide H.264, 24fps, CRF27, no audio; 1600px WebP poster.",
+    "usage": "Illustrative stock footage; not documented client farms, staff, or premises.",
+    "inspection": "Three contact frames retained in temporary source directory for manual review.",
+    "posterVariants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "/media/paddy-640.webp",
+        "bytes": 21840
+      },
+      {
+        "width": 960,
+        "height": 540,
+        "src": "/media/paddy-960.webp",
+        "bytes": 33890
+      }
+    ]
+  },
+  {
+    "id": 34781950,
+    "name": "harvest",
+    "creator": "Panya Niyomtham",
+    "page": "https://www.pexels.com/video/farmer-harvesting-rice-in-sunlit-field-34781950/",
+    "download": "https://videos.pexels.com/video-files/34781950/14745682_1920_1080_30fps.mp4",
+    "start": 3,
+    "length": 8,
+    "description": "A farmer cutting mature rice by hand in a sunlit paddy field.",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "video": "/media/harvest.mp4",
+    "poster": "/media/harvest.webp",
+    "bytes": 2432914,
+    "posterBytes": 244140,
+    "edits": "Excerpt from 3 seconds, up to 8 seconds; 1280px wide H.264, 24fps, CRF29, no audio; 1600px WebP poster.",
+    "usage": "Illustrative stock footage; not documented client farms, staff, or premises.",
+    "inspection": "Three contact frames retained in temporary source directory for manual review.",
+    "crf": 29,
+    "posterVariants": [
+      {
+        "width": 640,
+        "height": 360,
+        "src": "/media/harvest-640.webp",
+        "bytes": 46646
+      },
+      {
+        "width": 960,
+        "height": 540,
+        "src": "/media/harvest-960.webp",
+        "bytes": 93790
+      }
+    ]
+  },
+  {
+    "id": 18328392,
+    "name": "grain",
+    "creator": "Petr Ganaj",
+    "page": "https://www.pexels.com/photo/grains-of-rice-18328392/",
+    "download": "https://images.pexels.com/photos/18328392/pexels-photo-18328392.jpeg",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "poster": "/media/grain.webp",
+    "bytes": 96204,
+    "description": "Macro still photograph of uncooked white rice grains.",
+    "edits": "Resized to fit 1600px bounding box and encoded WebP quality 83.",
+    "usage": "Illustrative stock photography; not a photograph of a specific client product.",
+    "posterVariants": [
+      {
+        "width": 640,
+        "height": 427,
+        "src": "/media/grain-640.webp",
+        "bytes": 17546
+      },
+      {
+        "width": 960,
+        "height": 640,
+        "src": "/media/grain-960.webp",
+        "bytes": 30024
+      }
+    ]
+  }
+]

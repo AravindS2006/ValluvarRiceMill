@@ -1,1 +1,0 @@
-chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js

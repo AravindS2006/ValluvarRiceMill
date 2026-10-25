@@ -1,0 +1,30 @@
+---
+import { business, products, ui, t, type Locale } from '../data/site';
+interface Props { locale: Locale }
+const { locale } = Astro.props; const c = ui[locale];
+---
+<div class="enquiry-panel">
+  <h2 class="eyebrow">{c.formTag}</h2>
+  <form id="enquiry-form" data-locale={locale} data-whatsapp={business.whatsapp} novalidate>
+    <div class="form-grid">
+      <div class="field"><label for="name">{c.name}</label><input id="name" name="name" autocomplete="name" required minlength="2" maxlength="120" placeholder={locale === 'ta' ? 'உங்கள் முழுப் பெயர்' : 'Your full name'} aria-describedby="name-error" /><span class="field-error" id="name-error"></span></div>
+      <div class="field"><label for="businessName">{c.businessName}</label><input id="businessName" name="businessName" autocomplete="organization" required minlength="2" maxlength="120" placeholder={locale === 'ta' ? 'நிறுவனம் / கடைப் பெயர்' : 'Company / store name'} aria-describedby="businessName-error" /><span class="field-error" id="businessName-error"></span></div>
+      <div class="field"><label for="phone">{c.phone}</label><input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="25" placeholder="+91" aria-describedby="phone-error" /><span class="field-error" id="phone-error"></span></div>
+      <div class="field"><label for="product">{c.product}</label><select id="product" name="product" aria-describedby="product-error"><option value="choose">{c.helpChoose}</option>{products.map(product => <option value={product.id}>{t(product.name, locale)} · {product.packKg} kg</option>)}</select><span class="field-error" id="product-error"></span></div>
+      <div class="field"><label for="quantity">{c.quantity}</label><input id="quantity" name="quantity" type="number" inputmode="decimal" min="0.01" max="1000000" step="any" required placeholder="100" aria-describedby="quantity-error" /><span class="field-error" id="quantity-error"></span></div>
+      <div class="field"><label for="unit">{c.unit}</label><select id="unit" name="unit" aria-describedby="unit-error"><option value="kg">{c.kg}</option><option value="tonnes">{c.tonnes}</option><option value="bags">{c.bags}</option></select><span class="field-error" id="unit-error"></span></div>
+      <div class="field field-wide"><label for="destination">{c.destination}</label><input id="destination" name="destination" autocomplete="address-level2" required minlength="2" maxlength="120" placeholder={locale === 'ta' ? 'ஊர் அல்லது நகரம்' : 'Town or city'} aria-describedby="destination-error" /><span class="field-error" id="destination-error"></span></div>
+      <div class="field field-wide"><label for="message">{c.message} <span>({c.optional})</span></label><textarea id="message" name="message" rows="3" maxlength="1000" aria-describedby="message-error"></textarea><span class="field-error" id="message-error"></span></div>
+    </div>
+    <p class="form-status" role="status" data-form-status></p>
+    <button type="submit" class="button">{c.prepare}<span aria-hidden="true">↗</span></button>
+    <p class="privacy-note">{c.privacy}</p>
+  </form>
+  <section class="enquiry-result" data-enquiry-result hidden tabindex="-1" aria-labelledby="result-title">
+    <h3 id="result-title">{c.prepared}</h3><p data-handoff-note>{c.noSend}</p>
+    <label class="sr-only" for="enquiry-summary">{c.summary}</label><textarea id="enquiry-summary" readonly rows="11"></textarea>
+    <div class="result-actions"><button type="button" class="button button-outline" data-copy-enquiry>{c.copy}<span aria-hidden="true">↗</span></button><a class="button" href="#" data-whatsapp-link hidden target="_blank" rel="noopener noreferrer">{c.whatsapp}<span aria-hidden="true">↗</span></a></div>
+    <p data-copy-status role="status"></p>
+  </section>
+  <noscript><p>{locale === 'ta' ? 'விசாரணையைத் தயாரிக்க JavaScript ஐ இயக்கவும். மேலுள்ள புலங்களைப் பயன்படுத்தி உங்கள் தேவைகளை எழுதிக் கொள்ளலாம்.' : 'Enable JavaScript to prepare and copy your enquiry. You can still use the fields above to note your requirements.'}</p></noscript>
+</div>
