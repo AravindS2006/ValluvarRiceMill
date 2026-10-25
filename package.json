@@ -1,0 +1,36 @@
+{
+  "name": "valluvar-rice-mill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/astro.mjs dev --host 127.0.0.1",
+    "build": "node scripts/astro.mjs build",
+    "preview": "node scripts/astro.mjs preview --host 127.0.0.1",
+    "check": "node scripts/astro.mjs check",
+    "test": "vitest run",
+    "verify:site": "node scripts/verify-site.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5.2.8",
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/noto-sans-tamil": "^5.2.8",
+    "astro": "^5.16.0",
+    "gsap": "^3.13.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@types/three": "^0.180.0",
+    "happy-dom": "^20.14.6",
+    "lighthouse": "^12.8.2",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  },
+  "overrides": {
+    "undici": "^7.16.0"
+  },
+  "engines": {
+    "node": ">=22.14.0"
+  }
+}

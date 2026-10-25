@@ -1,0 +1,13 @@
+---
+interface Props { large?: boolean }
+const { large = false } = Astro.props;
+---
+<svg class:list={['brand-mark', { large }]} viewBox="0 0 48 64" fill="none" aria-hidden="true">
+  <path d="M24 61V13M24 46C14 43 8 34 7 22M24 37C34 34 40 26 41 13" stroke="currentColor" stroke-width="1.6"/>
+  <g fill="currentColor">
+    <ellipse cx="19" cy="13" rx="3" ry="6" transform="rotate(-35 19 13)"/><ellipse cx="29" cy="9" rx="3" ry="6" transform="rotate(30 29 9)"/>
+    <ellipse cx="17" cy="24" rx="3" ry="6" transform="rotate(-40 17 24)"/><ellipse cx="30" cy="21" rx="3" ry="6" transform="rotate(40 30 21)"/>
+    <ellipse cx="17" cy="35" rx="3" ry="6" transform="rotate(-40 17 35)"/><ellipse cx="30" cy="32" rx="3" ry="6" transform="rotate(40 30 32)"/>
+    <ellipse cx="7" cy="16" rx="2.4" ry="5" transform="rotate(-15 7 16)"/><ellipse cx="40" cy="8" rx="2.4" ry="5" transform="rotate(20 40 8)"/>
+  </g>
+</svg>

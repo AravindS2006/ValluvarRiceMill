@@ -1,0 +1,43 @@
+---
+import { stages, t, type Locale } from '../data/site';
+interface Props { stage: number; locale: Locale }
+const { stage, locale } = Astro.props;
+const labels = locale === 'ta' ? ['நெல்', 'பழுப்பு அரிசி', 'வெள்ளை அரிசி'] : ['PADDY', 'BROWN RICE', 'WHITE RICE'];
+---
+<div class="lifecycle-art">
+  <span class="art-kicker">{locale === 'ta' ? 'செய்முறை விளக்கப்படம்' : 'A PROCESS ILLUSTRATION'}</span>
+  <svg viewBox="0 0 540 340" role="img" aria-label={t(stages[stage].label, locale)}>
+    {stage === 0 && <>
+      <path d="M85 243H455" stroke="#b5bea4" stroke-dasharray="3 7" />
+      <path d="M270 213C263 246 275 262 260 291M269 248L244 268M267 258L288 284M270 231L289 253" fill="none" stroke="#ac9572" stroke-width="2" />
+      <ellipse cx="270" cy="208" rx="17" ry="35" transform="rotate(42 270 208)" fill="#c2a266" stroke="#927843" />
+      <path d="M273 188C271 159 282 136 276 105" fill="none" stroke="#5d8149" stroke-width="4" />
+      <path d="M276 151C247 152 238 126 247 110C264 114 275 130 276 151M278 134C306 132 319 105 313 85C292 92 278 109 278 134" fill="#708e4f" />
+      <circle cx="394" cy="86" r="23" fill="none" stroke="#bb9e5e" /><path d="M394 48V38M394 124V134M356 86H346M432 86H442" stroke="#bb9e5e" />
+    </>}
+    {stage === 3 && <>
+      <path d="M217 298C225 216 209 124 264 70C288 46 326 71 336 115" fill="none" stroke="#66834b" stroke-width="3" />
+      <path d="M220 235C168 224 155 175 158 147C193 158 215 189 220 235M223 194C272 177 278 134 273 117C244 133 226 160 223 194" fill="#7c9455" />
+      {[0,1,2,3,4,5,6].map(i => <g transform={`translate(${253+i*11},${80+Math.sin(i*.6)*29}) rotate(${-25+i*12})`}><path d="M0 0L16 27" stroke="#9b9b5b" /><ellipse cx="18" cy="30" rx="5" ry="11" fill="#a9ae66" /><path d="M18 24L29 16M18 28L31 26" stroke="#e2bd57" stroke-width="1.4" /><circle cx="30" cy="16" r="2.2" fill="#cfa54e" /><circle cx="32" cy="26" r="2.2" fill="#cfa54e" /></g>)}
+    </>}
+    {stage === 6 && <>
+      <circle cx="270" cy="74" r="22" fill="none" stroke="#bd9c55" stroke-width="1.5" />
+      {[0,1,2,3,4,5,6,7].map(i=><path d="M0 -30V-43" transform={`translate(270 74) rotate(${i*45})`} stroke="#bd9c55" />)}
+      <path d="M110 254Q270 142 430 254L110 254" fill="#d8c187" opacity=".5" />
+      {Array.from({length:36},(_,i)=><ellipse cx={130+(i%9)*34} cy={246-Math.sin((i%9)/8*Math.PI)*Math.floor(i/9)*18} rx="4" ry="11" transform={`rotate(${i%2?45:-35} ${130+(i%9)*34} ${246-Math.sin((i%9)/8*Math.PI)*Math.floor(i/9)*18})`} fill={i%3?'#b99c58':'#d1bb83'} />)}
+      <path d="M80 270H460M177 137L185 159M357 136L349 158" stroke="#9eaa8c" stroke-width="1.2" />
+    </>}
+    {stage === 7 && <>
+      {[0,1,2].map(i=><g transform={`translate(${120+i*150} 155)`}><ellipse rx={i===0?25:20} ry="61" transform="rotate(25)" fill={['#c4a15b','#ad8554','#eee5cc'][i]} stroke={['#a48544','#9b794d','#cfc7ad'][i]} stroke-width="1" /><path d="M-15 42L17 -42" stroke={['#98783c','#947248','#d5cdb5'][i]} opacity=".8" /><text y="107" text-anchor="middle" fill="#52674b" font-size={locale==='ta'?11:9} letter-spacing={locale==='ta'?0:1.5}>{labels[i]}</text></g>)}
+      <path d="M167 155H220M212 150L220 155L212 160M317 155H370M362 150L370 155L362 160" fill="none" stroke="#9da78b" />
+    </>}
+    {stage === 8 && <>
+      <path d="M130 102Q178 121 226 102L214 137Q241 172 235 256Q177 279 119 256Q113 173 142 137Z" fill="#e4ddc4" stroke="#b4aa8b" stroke-width="1.4" />
+      <path d="M142 137Q177 145 214 137M132 244Q176 257 222 244" fill="none" stroke="#a9a083" />
+      <path d="M316 127Q355 142 394 127L386 154Q407 187 402 254Q354 272 307 254Q301 190 325 154Z" fill="#d3d9bd" stroke="#9aa78a" stroke-width="1.4" />
+      <path d="M325 154Q355 160 386 154" fill="none" stroke="#91a07c" />
+      <path d="M177 226V169M177 205L160 185M177 193L192 172M355 226V187M355 211L342 197M355 203L367 187" fill="none" stroke="#7b8c60" stroke-width="2" />
+    </>}
+  </svg>
+  <span class="art-footer">ORYZA SATIVA <span>{String(stage+1).padStart(2,'0')} / 09</span></span>
+</div>

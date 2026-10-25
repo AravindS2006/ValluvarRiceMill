@@ -1,0 +1,11 @@
+---
+import { ui, pathFor, type Locale } from '../data/site';
+import Mark from './Mark.astro';
+interface Props { locale: Locale }
+const { locale } = Astro.props; const c = ui[locale];
+---
+<section class="cta section-pad">
+  <div class="cta-ornament"><Mark large /></div>
+  <div><p class="eyebrow">{c.ctaTag}</p><h2 class="multiline">{c.ctaTitle}</h2></div>
+  <div class="cta-action"><p>{c.ctaBody}</p><a class="button button-light" href={pathFor('contact', locale)}>{c.enquiry}<span aria-hidden="true">↗</span></a></div>
+</section>

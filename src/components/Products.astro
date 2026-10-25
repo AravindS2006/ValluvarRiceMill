@@ -1,0 +1,25 @@
+---
+import { products, t, ui, pathFor, type Locale } from '../data/site';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const c = ui[locale];
+---
+<div class="product-grid">
+  {products.map((product, index) => <article class={`product-card ${product.accent}`}>
+    <div class="product-art">
+      <span class="product-number">0{index + 1}</span>
+      <span class="product-draft">{c.draft}</span>
+      <img src="/media/grain.webp" srcset="/media/grain-640.webp 640w, /media/grain-960.webp 960w, /media/grain.webp 1600w" sizes="230px" alt={locale === 'ta' ? 'விளக்கத்திற்கான அரிசி மணிகள்' : 'Illustrative rice grains'} loading="lazy" width="1600" height="1067" />
+      <div class="grain-caption"><span>VALLUVAR</span><span>{product.packKg} <small>kg</small></span></div>
+    </div>
+    <div class="product-content"><div><p class="eyebrow">{t(product.subtitle, locale)}</p><h3>{t(product.name, locale)}</h3></div><button class="circle-link" type="button" data-open-dialog={`product-${product.id}`} aria-label={`${c.details}: ${t(product.name, locale)}`}>↗</button></div>
+    <dialog id={`product-${product.id}`} class="product-dialog">
+      <button type="button" class="dialog-close" data-close-dialog aria-label={c.close}>×</button>
+      <span class="eyebrow">{c.draft}</span><h2>{t(product.name, locale)}</h2>
+      <p>{t(product.description, locale)}</p>
+      <p class="pack-detail">{c.pack} <strong>{product.packKg} kg</strong></p>
+      <a class="button" href={`${pathFor('contact', locale)}?product=${product.id}`}>{c.request}<span aria-hidden="true">↗</span></a>
+    </dialog>
+  </article>)}
+</div>
+<p class="catalogue-note"><span aria-hidden="true">◌</span> {c.draftNote}</p>
