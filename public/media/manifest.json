@@ -31,7 +31,20 @@
         "src": "/media/planting-960.webp",
         "bytes": 131912
       }
-    ]
+    ],
+    "mobileVideo": {
+      "src": "/media/planting-mobile.mp4",
+      "width": 640,
+      "height": 360,
+      "bytes": 467731,
+      "fps": 24,
+      "codec": "H.264",
+      "crf": 31,
+      "audio": false,
+      "fastStart": true,
+      "sourceVideo": "/media/planting.mp4",
+      "edits": "Proportional 640px resize of the reviewed local loop, same excerpt and duration; H.264 CRF31, 24fps, no audio, fast-start enabled."
+    }
   },
   {
     "id": 1557401,
@@ -64,7 +77,20 @@
         "src": "/media/paddy-960.webp",
         "bytes": 33890
       }
-    ]
+    ],
+    "mobileVideo": {
+      "src": "/media/paddy-mobile.mp4",
+      "width": 640,
+      "height": 360,
+      "bytes": 169250,
+      "fps": 24,
+      "codec": "H.264",
+      "crf": 31,
+      "audio": false,
+      "fastStart": true,
+      "sourceVideo": "/media/paddy.mp4",
+      "edits": "Proportional 640px resize of the reviewed local loop, same excerpt and duration; H.264 CRF31, 24fps, no audio, fast-start enabled."
+    }
   },
   {
     "id": 34781950,
@@ -98,7 +124,20 @@
         "src": "/media/harvest-960.webp",
         "bytes": 93790
       }
-    ]
+    ],
+    "mobileVideo": {
+      "src": "/media/harvest-mobile.mp4",
+      "width": 640,
+      "height": 360,
+      "bytes": 476203,
+      "fps": 24,
+      "codec": "H.264",
+      "crf": 31,
+      "audio": false,
+      "fastStart": true,
+      "sourceVideo": "/media/harvest.mp4",
+      "edits": "Proportional 640px resize of the reviewed local loop, same excerpt and duration; H.264 CRF31, 24fps, no audio, fast-start enabled."
+    }
   },
   {
     "id": 18328392,

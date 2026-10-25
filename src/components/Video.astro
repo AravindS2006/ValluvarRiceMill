@@ -1,13 +1,14 @@
 ---
+import { withBase as assetPath, assetSrcset } from '../lib/paths';
 import { ui, type Locale } from '../data/site';
 interface Props { name: 'paddy' | 'planting' | 'harvest'; locale: Locale; hero?: boolean; caption?: string }
 const { name, locale, hero = false, caption } = Astro.props;
 const copy = ui[locale];
 ---
 <div class:list={['video-shell', { 'hero-video': hero }]} data-video-shell>
-  <img class="video-poster" src={`/media/${name}.webp`} srcset={`/media/${name}-640.webp 640w, /media/${name}-960.webp 960w, /media/${name}.webp 1600w`} sizes={hero ? '100vw' : '(max-width: 650px) 100vw, 50vw'} alt="" width="1600" height="900" loading={hero ? 'eager' : 'lazy'} fetchpriority={hero ? 'high' : 'auto'} />
-  <video data-lazy-video data-src={`/media/${name}.mp4`} muted loop playsinline preload="none" aria-label={caption || copy.watch}>
-    <track kind="captions" src={`/media/${locale}.vtt`} srclang={locale} label={locale === 'ta' ? 'தமிழ்' : 'English'} />
+  <img class="video-poster" src={assetPath(`/media/${name}.webp`)} srcset={assetSrcset(`/media/${name}-640.webp 640w, /media/${name}-960.webp 960w, /media/${name}.webp 1600w`)} sizes={hero ? '100vw' : '(max-width: 650px) 100vw, 50vw'} alt="" width="1600" height="900" loading={hero ? 'eager' : 'lazy'} fetchpriority={hero ? 'high' : 'auto'} />
+  <video data-lazy-video data-src={assetPath(`/media/${name}.mp4`)} data-mobile-src={assetPath(`/media/${name}-mobile.mp4`)} autoplay muted loop playsinline preload="none" aria-label={caption || copy.watch}>
+    <track kind="captions" src={assetPath(`/media/${locale}.vtt`)} srclang={locale} label={locale === 'ta' ? 'தமிழ்' : 'English'} />
   </video>
   <button class="video-toggle" type="button" data-video-toggle data-pause={copy.pause} data-play={copy.resume} aria-label={copy.resume} aria-pressed="false"><span data-video-icon aria-hidden="true">▶</span><span class="sr-only" data-video-label>{copy.resume}</span></button>
   <span class="video-failure" hidden>{copy.videoError}</span>

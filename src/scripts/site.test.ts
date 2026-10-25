@@ -11,7 +11,7 @@ class MockIntersectionObserver {
   unobserve() {} disconnect() {}
   emit(target: Element, ratio: number) { this.callback([{ target, intersectionRatio: ratio, isIntersecting: ratio > 0 } as IntersectionObserverEntry], this as unknown as IntersectionObserver); }
 }
-const fixture = () => `<div data-video-shell><video data-lazy-video data-src="/media/paddy.mp4"></video><button data-video-toggle><span data-video-icon></span><span data-video-label></span></button><span class="video-failure" hidden>Video unavailable</span></div>`;
+const fixture = () => `<div data-video-shell><video data-lazy-video data-src="/media/paddy.mp4" data-mobile-src="/media/paddy-mobile.mp4"></video><button data-video-toggle><span data-video-icon></span><span data-video-label></span></button><span class="video-failure" hidden>Video unavailable</span></div>`;
 const video = () => document.querySelector('video')!;
 async function mount(extra = '') {
   document.body.innerHTML = fixture() + extra; document.body.dataset.locale = 'en';
@@ -32,11 +32,16 @@ beforeEach(() => {
 afterEach(() => { vi.restoreAllMocks(); vi.unstubAllGlobals(); document.body.innerHTML = ''; });
 
 describe('media loading and fallback behaviour', () => {
-  it('autoplays only a visible desktop clip and pauses it when it leaves view', async () => {
+  it('autoplays only a visible clip and pauses it when it leaves view', async () => {
     await mount(); expect(video().getAttribute('src')).toBe('/media/paddy.mp4'); expect(video().paused).toBe(false);
     observers[0].emit(video(), 0); expect(video().paused).toBe(true);
   });
-  it.each(['reduced', 'mobile', 'saveData'] as const)('does not download autoplay video with %s preference', async preference => {
+  it('autoplays muted inline video on mobile', async () => {
+    preferences.mobile = true; await mount();
+    expect(video().getAttribute('src')).toBe('/media/paddy-mobile.mp4'); expect(video().paused).toBe(false);
+    expect(video().muted).toBe(true); expect(video().defaultMuted).toBe(true);
+  });
+  it.each(['reduced', 'saveData'] as const)('does not download autoplay video with %s preference', async preference => {
     preferences[preference] = true; await mount(); expect(video().getAttribute('src')).toBeNull();
     document.querySelector<HTMLButtonElement>('[data-video-toggle]')!.click(); await Promise.resolve();
     expect(video().getAttribute('src')).toBe('/media/paddy.mp4'); expect(video().paused).toBe(false);

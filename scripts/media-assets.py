@@ -66,6 +66,32 @@ ASSETS = [
 def run(args):
     subprocess.run([ENCODER, '-hide_banner', '-loglevel', 'error', '-y', *args], check=True)
 
+
+def mobile_video(name):
+    """Encode a smaller delivery copy from the exact reviewed desktop loop."""
+    source = OUT / f'{name}.mp4'
+    output = OUT / f'{name}-mobile.mp4'
+    if not output.exists() or '--force-mobile' in sys.argv:
+        run(['-i', str(source), '-vf', 'scale=640:-2', '-r', '24',
+             '-c:v', 'libx264', '-preset', 'slow', '-crf', '31',
+             '-pix_fmt', 'yuv420p', '-an', '-movflags', '+faststart', str(output)])
+    return {'src': '/media/' + output.name, 'width': 640, 'height': 360,
+            'bytes': output.stat().st_size, 'fps': 24, 'codec': 'H.264',
+            'crf': 31, 'audio': False, 'fastStart': True,
+            'sourceVideo': '/media/' + source.name,
+            'edits': 'Proportional 640px resize of the reviewed local loop, same excerpt and duration; H.264 CRF31, 24fps, no audio, fast-start enabled.'}
+
+
+if '--mobile-only' in sys.argv:
+    manifest_path = OUT / 'manifest.json'
+    manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+    for asset in manifest:
+        if asset.get('video'):
+            asset['mobileVideo'] = mobile_video(asset['name'])
+            print(asset['name'], asset['mobileVideo'], flush=True)
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    sys.exit(0)
+
 manifest = []
 for asset in ASSETS:
     original = TMP / (asset['name'] + '-source.mp4')
@@ -93,6 +119,7 @@ for asset in ASSETS:
                      'licenseUrl': 'https://www.pexels.com/license/',
                      'video': '/media/' + video.name, 'poster': '/media/' + poster.name,
                      'bytes': video.stat().st_size, 'posterBytes': poster.stat().st_size,
+                     'mobileVideo': mobile_video(asset['name']),
                      'posterVariants': responsive_variants(asset['name']),
                      'edits': f"Excerpt from {asset['start']} seconds, up to {asset['length']} seconds; 1280px wide H.264, 24fps, CRF{asset['crf']}, no audio; 1600px WebP poster.",
                      'usage': 'Illustrative stock footage; not documented client farms, staff, or premises.',

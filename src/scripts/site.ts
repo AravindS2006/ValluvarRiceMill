@@ -35,11 +35,14 @@ function setVideoState(state: VideoState, playing: boolean) {
 }
 async function play(state: VideoState) {
   if (state.failed) return;
-  if (!state.video.src) { state.video.src = state.video.dataset.src!; state.video.load(); }
+  state.video.muted = true;
+  state.video.defaultMuted = true;
+  state.video.playsInline = true;
+  if (!state.video.src) { state.video.src = mobileMedia.matches && state.video.dataset.mobileSrc ? state.video.dataset.mobileSrc : state.video.dataset.src!; state.video.load(); }
   try { await state.video.play(); } catch { setVideoState(state, false); }
 }
 function reconcileVideos() {
-  const active = videos.filter(v => v.ratio >= .2 && !v.pausedByUser && !v.failed && (v.explicitPlay || (!reducedMotion.matches && !connection?.saveData && !mobileMedia.matches))).sort((a, b) => b.ratio - a.ratio)[0];
+  const active = videos.filter(v => v.ratio >= .2 && !v.pausedByUser && !v.failed && (v.explicitPlay || (!reducedMotion.matches && !connection?.saveData))).sort((a, b) => b.ratio - a.ratio)[0];
   videos.forEach(state => { if (state === active && !document.hidden) { if (state.video.paused) void play(state); } else state.video.pause(); });
 }
 const videoObserver = new IntersectionObserver(entries => { entries.forEach(entry => { const state = videos.find(v => v.video === entry.target); if (state) state.ratio = entry.intersectionRatio; }); reconcileVideos(); }, { threshold: [0, .2, .5, .8, 1] });

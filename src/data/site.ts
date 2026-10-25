@@ -1,20 +1,24 @@
+import { withBase } from '../lib/paths';
 export type Locale = 'en' | 'ta';
 export type PageKey = 'home' | 'mill' | 'journey' | 'rice' | 'gallery' | 'contact';
 export type Localized = Record<Locale, string>;
 export const business = {
   brand: 'Valluvar',
-  legalName: 'Thirumurugan Modern Rice Mill',
+  legalName: 'R.R. Chithamparasamy, Thirumurugan Modern Rice Mill',
+  millName: 'Thirumurugan Modern Rice Mill',
+  proprietor: 'R.R. Chidambarasamy',
   established: 1992,
-  location: 'Palani Road, Dharapuram, Tamil Nadu',
+  location: 'Palani Road, Achiyur Post, Dharapuram, Tamil Nadu',
   // Add the client-confirmed international number (digits only) before launch.
   whatsapp: '',
   email: '',
   reviewBuild: true,
 };
 export const pages: PageKey[] = ['home', 'mill', 'journey', 'rice', 'gallery', 'contact'];
-export function pathFor(page: PageKey, locale: Locale = 'en') {
+export function routeFor(page: PageKey, locale: Locale = 'en') {
   return `${locale === 'ta' ? '/ta' : ''}/${page === 'home' ? '' : `${page}/`}`;
 }
+export function pathFor(page: PageKey, locale: Locale = 'en') { return withBase(routeFor(page, locale)); }
 export function t(value: Localized, locale: Locale) { return value[locale]; }
 export const nav: Record<PageKey, Localized> = {
   home: { en: 'Home', ta: 'முகப்பு' },
@@ -31,30 +35,35 @@ export const ui = {
     heroBody: 'From the first green shoot to the rice on your table. Discover the care behind every stage.',
     heroSide: 'It all begins\nwith the earth.', scroll: 'SCROLL TO DISCOVER', storyTag: 'OUR ROOTS',
     storyTitle: 'Rooted in the land.\nMade for your table.',
-    storyBody: 'In Dharapuram, Tamil Nadu, rice is part of everyday life. Valluvar brings that story to the table through Thirumurugan Modern Rice Mill, established in 1992.',
+    storyBody: 'Valluvar Brand Rice is rooted in Dharapuram, Tamil Nadu. Owned by R.R. Chidambarasamy and backed by Thirumurugan Modern Rice Mill, our rice story began in 1992.',
     storyLink: 'Meet the mill', journeyTag: 'FROM SEED TO TABLE', journeyTitle: 'Every grain has a story.',
     journeyBody: 'Water, sunlight, seasons, and human care. Follow rice through the field and into the mill.',
     chapterLink: 'Explore the whole journey', collectionTag: 'THE VALLUVAR COLLECTION', collectionTitle: 'Find your everyday grain.',
     collectionBody: 'A starting point for your next wholesale conversation. Tell us what your business needs.',
-    collectionLink: 'Explore our rice', details: 'Discover this rice', draft: 'Catalogue preview',
-    draftNote: 'Product names and pack sizes await client confirmation. Ask us about your requirements.',
+    collectionLink: 'Explore our rice', details: 'Discover this rice',
+    draftNote: 'Boiled rice and broken rice, both in 26 kg bags. Enquire for current availability and wholesale pricing.',
     pack: 'PACK SIZE', request: 'Enquire about this rice', close: 'Close',
     ctaTag: 'LET’S START A CONVERSATION', ctaTitle: 'Good rice.\nBetter connections.',
     ctaBody: 'For retailers, restaurants, and wholesale buyers. Share your requirements and let’s take the next step.',
     footerNote: 'A story of rice, from Dharapuram to your table.',
-    stockNote: 'Illustrative stock footage and photography. These are not images of the client’s premises.',
-    preview: 'DESIGN PREVIEW', previewNote: 'Catalogue and sales contacts are awaiting confirmation.',
+    stockNote: 'Field footage is illustrative stock media; it does not depict our own fields or mill.',
+    preview: 'DESIGN PREVIEW', previewNote: 'Sales contacts are awaiting confirmation.',
     menu: 'Open navigation', skip: 'Skip to content', pause: 'Pause motion', resume: 'Play motion',
     viewJourney: 'Explore the journey', allRice: 'View the collection',
     millTag: 'THIRUMURUGAN MODERN RICE MILL', millTitle: 'Our place in\nthe rice story.',
     millIntro: 'A rice milling and trading business in Dharapuram, Tamil Nadu. The home of Valluvar.',
     historyTitle: 'A story beginning in 1992.',
     historyBody: 'Acuité’s published business profile records Thirumurugan Modern Rice Mill as established in 1992 by R. R. Chidambarasamy. Our story is grounded in this place and in the grain that brings us together.',
+    profileTag: 'THE NAME BEHIND THE GRAIN', profileTitle: 'Behind the Valluvar name.',
+    profileBody: 'Valluvar Brand Rice is a registered rice trademark owned by R.R. Chidambarasamy. The enterprise operates as R.R. Chithamparasamy, Thirumurugan Modern Rice Mill, with rice milling, manufacturing, and trading operations in Dharapuram, Tamil Nadu.',
+    registeredBrand: 'Registered rice brand', proprietor: 'Brand proprietor', registeredBusiness: 'Business name', manufacturing: 'Manufacturing base',
+    trademarkSource: 'Brand ownership · published Madras High Court record', companySource: 'Company profile · Acuité, 25 April 2025',
+    ownershipNote: 'Valluvar Brand Rice is a registered trademark owned by R.R. Chidambarasamy.',
     processTag: 'UNDERSTANDING THE MILL', processTitle: 'The craft behind the grain.',
     processBody: 'Rice milling removes the husk and, for white rice, the bran. Cleaning, drying, milling, and grading each play a part in preparing rice. This is an introduction to the general process; specific equipment and practices at the mill await confirmation.',
-    placeTag: 'FIND OUR ROOTS', placeTitle: 'Dharapuram,\nTamil Nadu.', placeBody: 'Palani Road, Dharapuram, Tamil Nadu, India. Exact visitor directions and sales contacts will be added after client confirmation.',
+    placeTag: 'FIND OUR ROOTS', placeTitle: 'Dharapuram,\nTamil Nadu.', placeBody: 'The mill’s manufacturing operations are based on Palani Road, Achiyur Post, Dharapuram, Tamil Nadu, India. Contact details and exact visitor directions will be added after confirmation.',
     source: 'Source: Acuité business profile, 4 November 2022',
-    riceTitle: 'Rice for the\neveryday & beyond.', riceIntro: 'Explore the draft Valluvar range and prepare an enquiry for your business.',
+    riceTitle: 'Rice for the\neveryday & beyond.', riceIntro: 'Meet Valluvar Brand Boiled Rice and Broken Rice. Two everyday essentials, each in a 26 kg bag.',
     riceGuideTitle: 'The right rice starts\nwith a conversation.',
     riceGuideBody: 'Tell us your preferred variety, pack size, quantity, and destination. Current availability, specifications, and pricing will be confirmed directly.',
     galleryTitle: 'A closer look\nat the journey.', galleryIntro: 'Light on a paddy field. The rhythm of planting. Grain ready for harvest. An illustrated field notebook.',
@@ -89,30 +98,35 @@ export const ui = {
     heroBody: 'முதல் பசுந்தளிரிலிருந்து உங்கள் உணவு மேசை வரை. ஒவ்வொரு நிலையிலும் இருக்கும் அக்கறையை அறியுங்கள்.',
     heroSide: 'அனைத்தும்\nமண்ணில் தொடங்குகிறது.', scroll: 'கீழே நகர்த்திப் பாருங்கள்', storyTag: 'எங்கள் வேர்கள்',
     storyTitle: 'மண்ணில் வேரூன்றி.\nஉங்கள் உணவு மேசைக்கு.',
-    storyBody: 'தமிழ்நாட்டின் தாராபுரத்தில் அரிசி அன்றாட வாழ்வின் ஒரு பகுதி. 1992 இல் தொடங்கப்பட்ட திருமுருகன் மாடர்ன் ரைஸ் மில் வழியாக வள்ளுவர் அந்தக் கதையை உங்கள் மேசைக்குக் கொண்டுவருகிறது.',
+    storyBody: 'தமிழ்நாட்டின் தாராபுரத்தில் வேரூன்றிய வள்ளுவர் பிராண்ட் அரிசி, ஆர். ஆர். சிதம்பரசாமிக்கு உரியது. திருமுருகன் மாடர்ன் ரைஸ் மில் வழியாக 1992 முதல் எங்கள் அரிசியின் பயணம் தொடர்கிறது.',
     storyLink: 'ஆலையை அறியுங்கள்', journeyTag: 'விதையிலிருந்து உணவு வரை', journeyTitle: 'ஒவ்வொரு தானியத்திற்கும் ஒரு கதை.',
     journeyBody: 'நீர், சூரிய ஒளி, பருவங்கள், மனித உழைப்பு. வயலிலிருந்து ஆலை வரையிலான அரிசியின் பயணத்தைப் பாருங்கள்.',
     chapterLink: 'முழுப் பயணத்தையும் காணுங்கள்', collectionTag: 'வள்ளுவர் அரிசி வகைகள்', collectionTitle: 'உங்கள் அன்றாட அரிசியைத் தேர்ந்தெடுங்கள்.',
     collectionBody: 'உங்கள் அடுத்த மொத்த விற்பனை உரையாடலுக்கான தொடக்கம். உங்கள் வணிகத் தேவைகளைத் தெரிவியுங்கள்.',
-    collectionLink: 'அரிசி வகைகளைப் பாருங்கள்', details: 'இந்த அரிசியை அறியுங்கள்', draft: 'பட்டியல் முன்னோட்டம்',
-    draftNote: 'அரிசிப் பெயர்களும் பொதி அளவுகளும் வாடிக்கையாளர் உறுதிப்படுத்தலுக்காகக் காத்திருக்கின்றன. உங்கள் தேவைகளைத் தெரிவியுங்கள்.',
+    collectionLink: 'அரிசி வகைகளைப் பாருங்கள்', details: 'இந்த அரிசியை அறியுங்கள்',
+    draftNote: 'புழுங்கல் அரிசி மற்றும் உடைந்த அரிசி — இரண்டும் 26 கிலோ மூட்டைகளில். தற்போதைய இருப்பு மற்றும் மொத்த விலைக்கு விசாரிக்கவும்.',
     pack: 'பொதி அளவு', request: 'இந்த அரிசி பற்றி விசாரிக்க', close: 'மூடு',
     ctaTag: 'ஓர் உரையாடலைத் தொடங்குவோம்', ctaTitle: 'நல்ல அரிசி.\nநல்ல உறவுகள்.',
     ctaBody: 'சில்லறை விற்பனையாளர்கள், உணவகங்கள் மற்றும் மொத்த விற்பனையாளர்களுக்கு. உங்கள் தேவைகளைப் பகிருங்கள்.',
     footerNote: 'தாராபுரத்திலிருந்து உங்கள் உணவு மேசை வரை, அரிசியின் கதை.',
-    stockNote: 'விளக்கத்திற்கான பொதுப் பயன்பாட்டுக் காட்சிகள். இவை வாடிக்கையாளரின் ஆலை அல்லது வயல்களின் படங்கள் அல்ல.',
-    preview: 'வடிவமைப்பு முன்னோட்டம்', previewNote: 'அரிசிப் பட்டியலும் விற்பனைத் தொடர்புகளும் உறுதிப்படுத்தப்பட வேண்டும்.',
+    stockNote: 'வயல் காட்சிகள் விளக்கத்திற்கான பொதுப் பயன்பாட்டுக் காட்சிகள்; இவை எங்கள் சொந்த வயல்களையோ ஆலையையோ காட்டவில்லை.',
+    preview: 'வடிவமைப்பு முன்னோட்டம்', previewNote: 'விற்பனைத் தொடர்புகள் உறுதிப்படுத்தப்பட வேண்டும்.',
     menu: 'வழிசெலுத்தலைத் திற', skip: 'உள்ளடக்கத்திற்குச் செல்ல', pause: 'அசைவை நிறுத்து', resume: 'அசைவை இயக்கு',
     viewJourney: 'பயணத்தை அறியுங்கள்', allRice: 'அரிசி வகைகளைக் காண்க',
     millTag: 'திருமுருகன் மாடர்ன் ரைஸ் மில்', millTitle: 'அரிசியின் கதையில்\nஎங்கள் இடம்.',
     millIntro: 'தமிழ்நாட்டின் தாராபுரத்தில் அரிசி அரைத்தல் மற்றும் வணிகத்தில் ஈடுபடும் நிறுவனம். வள்ளுவரின் இல்லம்.',
     historyTitle: '1992 இல் தொடங்கிய கதை.',
     historyBody: 'திருமுருகன் மாடர்ன் ரைஸ் மில் 1992 இல் ஆர். ஆர். சிதம்பரசாமியால் தொடங்கப்பட்டதாக Acuité நிறுவனத்தின் வெளியிடப்பட்ட வணிகக் குறிப்பு பதிவு செய்கிறது. எங்கள் கதை இந்த ஊருடனும் அரிசியுடனும் இணைந்துள்ளது.',
+    profileTag: 'தானியத்திற்குப் பின்னுள்ள நிறுவனம்', profileTitle: 'வள்ளுவர் பெயருக்குப் பின்னால்.',
+    profileBody: 'வள்ளுவர் பிராண்ட் அரிசி, ஆர். ஆர். சிதம்பரசாமிக்கு உரிய பதிவு செய்யப்பட்ட அரிசி வணிக முத்திரையாகும். ஆர். ஆர். சித்தம்பரசாமி, திருமுருகன் மாடர்ன் ரைஸ் மில் என்ற வணிகப் பெயரில் இயங்கும் இந்நிறுவனத்தின் அரிசி உற்பத்தி, அரைத்தல் மற்றும் விற்பனைப் பணிகள் தமிழ்நாட்டின் தாராபுரத்தில் நடைபெறுகின்றன.',
+    registeredBrand: 'பதிவு செய்யப்பட்ட அரிசி பிராண்ட்', proprietor: 'பிராண்ட் உரிமையாளர்', registeredBusiness: 'வணிகப் பெயர்', manufacturing: 'உற்பத்தி நடைபெறும் இடம்',
+    trademarkSource: 'உரிமை விவரம் · வெளியிடப்பட்ட சென்னை உயர் நீதிமன்றப் பதிவு', companySource: 'நிறுவன விவரம் · Acuité, 25 ஏப்ரல் 2025',
+    ownershipNote: 'வள்ளுவர் பிராண்ட் அரிசி, ஆர். ஆர். சிதம்பரசாமிக்கு உரிய பதிவு செய்யப்பட்ட வணிக முத்திரையாகும்.',
     processTag: 'ஆலையைப் புரிந்துகொள்வோம்', processTitle: 'தானியத்திற்குப் பின்னுள்ள பணி.',
     processBody: 'அரிசி அரைக்கும் முறையில் நெல்லின் உமியும், வெள்ளை அரிசிக்கு தவிடும் நீக்கப்படுகின்றன. சுத்தம் செய்தல், உலர்த்தல், அரைத்தல் மற்றும் தரம் பிரித்தல் ஆகியவை அரிசியைத் தயாரிக்கும் நிலைகள். இது பொதுவான செய்முறை விளக்கம்; ஆலையின் குறிப்பிட்ட இயந்திரங்களும் நடைமுறைகளும் உறுதிப்படுத்தப்பட வேண்டும்.',
-    placeTag: 'எங்கள் இருப்பிடம்', placeTitle: 'தாராபுரம்,\nதமிழ்நாடு.', placeBody: 'பழனி சாலை, தாராபுரம், தமிழ்நாடு, இந்தியா. துல்லியமான வழிகாட்டுதல்களும் விற்பனைத் தொடர்புகளும் உறுதிப்படுத்தப்பட்ட பின் சேர்க்கப்படும்.',
+    placeTag: 'எங்கள் இருப்பிடம்', placeTitle: 'தாராபுரம்,\nதமிழ்நாடு.', placeBody: 'எங்கள் அரிசி உற்பத்திப் பணிகள் பழனி சாலை, ஆச்சியூர் அஞ்சல், தாராபுரம், தமிழ்நாடு, இந்தியாவில் நடைபெறுகின்றன. விற்பனைத் தொடர்புகளும் துல்லியமான வழிகாட்டுதல்களும் உறுதிப்படுத்தப்பட்ட பின் சேர்க்கப்படும்.',
     source: 'ஆதாரம்: Acuité வணிகக் குறிப்பு, 4 நவம்பர் 2022',
-    riceTitle: 'அன்றாடத்திற்கும்\nஅதற்கு அப்பாலும்.', riceIntro: 'வள்ளுவரின் வரைவு அரிசிப் பட்டியலைப் பார்த்து உங்கள் வணிகத்திற்கான விசாரணையைத் தயாரியுங்கள்.',
+    riceTitle: 'அன்றாடத்திற்கும்\nஅதற்கு அப்பாலும்.', riceIntro: 'வள்ளுவர் பிராண்ட் புழுங்கல் அரிசி மற்றும் உடைந்த அரிசி. இரண்டும் 26 கிலோ மூட்டைகளில்.',
     riceGuideTitle: 'சரியான அரிசிக்கு\nஓர் உரையாடல்.',
     riceGuideBody: 'விரும்பும் அரிசி வகை, பொதி அளவு, தேவையான அளவு மற்றும் சேருமிடத்தைத் தெரிவியுங்கள். கிடைக்கும் நிலை, விவரங்கள் மற்றும் விலை நேரடியாக உறுதிப்படுத்தப்படும்.',
     galleryTitle: 'பயணத்தை\nஅருகில் பாருங்கள்.', galleryIntro: 'வயலின் மேல் விழும் ஒளி. நாற்று நடவின் ஓசை. அறுவடைக்குத் தயாரான நெல். காட்சிகள் நிறைந்த வயல் குறிப்புகள்.',
@@ -143,8 +157,8 @@ export const ui = {
   },
 };
 export const products = [
-  { id: 'rnr', name: { en: 'RNR Rice', ta: 'ஆர்.என்.ஆர். அரிசி' }, subtitle: { en: 'An everyday essential.', ta: 'அன்றாட உணவின் அங்கம்.' }, packKg: 26, status: 'provisional' as const, accent: 'green', source: 'https://www.ricebee.in/products/valluvar-brand-rnr-rice-26kg-SKU-0076', description: { en: 'Publicly listed as Valluvar Brand RNR Rice in a 26 kg pack. Variety specifications and current supply are awaiting client confirmation.', ta: 'பொது விற்பனைப் பட்டியலில் வள்ளுவர் ஆர்.என்.ஆர். அரிசி 26 கிலோ பொதியாகக் குறிப்பிடப்பட்டுள்ளது. முழு விவரங்களும் தற்போதைய விற்பனையும் உறுதிப்படுத்தப்பட வேண்டும்.' } },
-  { id: 'rajabogam', name: { en: 'Special Rajabogam', ta: 'ஸ்பெஷல் ராஜபோகம்' }, subtitle: { en: 'A place at your table.', ta: 'உங்கள் உணவு மேசைக்கு.' }, packKg: 25, status: 'provisional' as const, accent: 'gold', source: 'https://kmart-wholesale.store.shoopy.in/products/25kg-valluvar-brand-rice-SKU-0024', description: { en: 'Publicly listed as Valluvar Brand Special Rajabogam in a 25 kg pack. Pack size and current supply are awaiting client confirmation.', ta: 'பொது விற்பனைப் பட்டியலில் வள்ளுவர் ஸ்பெஷல் ராஜபோகம் 25 கிலோ பொதியாகக் குறிப்பிடப்பட்டுள்ளது. பொதி அளவும் தற்போதைய விற்பனையும் உறுதிப்படுத்தப்பட வேண்டும்.' } },
+  { id: 'boiled', name: { en: 'Boiled Rice', ta: 'புழுங்கல் அரிசி' }, subtitle: { en: 'Valluvar Brand · Special Rajabogam', ta: 'வள்ளுவர் பிராண்ட் · ஸ்பெஷல் ராஜபோகம்' }, packKg: 26, status: 'confirmed' as const, accent: 'gold', image: '/media/products/boiled-rice-26kg.webp', imageSmall: '/media/products/boiled-rice-26kg-480.webp', description: { en: 'Valluvar Brand Boiled Rice in the gold Special Rajabogam 26 kg bag. Enquire for current availability, order quantities, and wholesale pricing.', ta: 'வள்ளுவர் பிராண்ட் புழுங்கல் அரிசி — பொன்னிற ஸ்பெஷல் ராஜபோகம் 26 கிலோ மூட்டையில். தற்போதைய இருப்பு, தேவையான அளவு மற்றும் மொத்த விலைக்கு விசாரிக்கவும்.' } },
+  { id: 'broken', name: { en: 'Broken Rice', ta: 'உடைந்த அரிசி' }, subtitle: { en: 'Valluvar Brand · Blue pack', ta: 'வள்ளுவர் பிராண்ட் · நீல நிற மூட்டை' }, packKg: 26, status: 'confirmed' as const, accent: 'blue', image: '/media/products/broken-rice-26kg.webp', imageSmall: '/media/products/broken-rice-26kg-480.webp', description: { en: 'Valluvar Brand Broken Rice in a blue 26 kg bag. Enquire for current availability, order quantities, and wholesale pricing.', ta: 'வள்ளுவர் பிராண்ட் உடைந்த அரிசி — நீல நிற 26 கிலோ மூட்டையில். தற்போதைய இருப்பு, தேவையான அளவு மற்றும் மொத்த விலைக்கு விசாரிக்கவும்.' } },
 ];
 export const stages: { title: Localized; body: Localized; media: 'planting' | 'paddy' | 'harvest' | 'grain'; label: Localized }[] = [
   { title: { en: 'It starts with a seed.', ta: 'ஒரு விதையில் தொடங்குகிறது.' }, body: { en: 'A viable seed absorbs water and germinates. Roots anchor the young plant while the first green shoot reaches towards the light.', ta: 'உயிர்ப்புள்ள விதை நீரை உறிஞ்சி முளைக்கிறது. இளம் செடியின் வேர்கள் நிலத்தில் பதிய, முதல் பசுந்தளிர் ஒளியை நோக்கி வளர்கிறது.' }, media: 'planting', label: { en: 'SEED & GERMINATION', ta: 'விதை மற்றும் முளைத்தல்' } },
@@ -159,6 +173,6 @@ export const stages: { title: Localized; body: Localized; media: 'planting' | 'p
 ];
 export const faqs = [
   { q: { en: 'How can I make a wholesale enquiry?', ta: 'மொத்த விற்பனைக்கு எப்படி விசாரிப்பது?' }, a: { en: 'Use the enquiry composer to describe your business, rice preference, quantity, and delivery location. You can copy the prepared message. WhatsApp will be available once the sales number is confirmed.', ta: 'உங்கள் வணிகம், விரும்பும் அரிசி, அளவு மற்றும் சேருமிடத்தை விசாரணைப் படிவத்தில் தெரிவியுங்கள். தயாரான செய்தியை நகலெடுக்கலாம். விற்பனை எண் உறுதிப்படுத்தப்பட்ட பின் WhatsApp வசதி கிடைக்கும்.' } },
-  { q: { en: 'Are these products currently available?', ta: 'இந்த அரிசி வகைகள் தற்போது கிடைக்கின்றனவா?' }, a: { en: 'The catalogue is a preview based on public listings. Products, pack sizes, prices, and current availability must be confirmed with the business before ordering.', ta: 'இந்தப் பட்டியல் பொது விற்பனைப் பதிவுகளின் அடிப்படையிலான முன்னோட்டம். அரிசி வகைகள், பொதி அளவுகள், விலைகள் மற்றும் கிடைக்கும் நிலையை நிறுவனத்திடம் உறுதிப்படுத்த வேண்டும்.' } },
-  { q: { en: 'Is the field footage from your own farm?', ta: 'வயல் காட்சிகள் உங்கள் சொந்த வயலிலிருந்து எடுக்கப்பட்டவையா?' }, a: { en: 'The field footage is licensed stock media used to explain the rice lifecycle. It does not depict the client’s own fields or premises.', ta: 'நெற்பயிரின் வாழ்க்கைச் சுழற்சியை விளக்க உரிமம் பெற்ற பொதுப் பயன்பாட்டுக் காட்சிகள் பயன்படுத்தப்பட்டுள்ளன. இவை வாடிக்கையாளரின் சொந்த வயல்களையோ ஆலையையோ காட்டவில்லை.' } },
+  { q: { en: 'Which rice types and pack sizes are offered?', ta: 'எந்த அரிசி வகைகள் மற்றும் பொதி அளவுகள் உள்ளன?' }, a: { en: 'Valluvar Brand Boiled Rice and Broken Rice are presented in 26 kg bags, using client-confirmed product names and photographs. Current availability and pricing are confirmed directly before ordering.', ta: 'வாடிக்கையாளர் உறுதிப்படுத்திய பெயர்களும் புகைப்படங்களும் கொண்ட வள்ளுவர் பிராண்ட் புழுங்கல் அரிசி மற்றும் உடைந்த அரிசி 26 கிலோ மூட்டைகளில் வழங்கப்படுகின்றன. ஆர்டர் செய்வதற்கு முன் தற்போதைய இருப்பையும் விலையையும் நேரடியாக உறுதிப்படுத்தவும்.' } },
+  { q: { en: 'Is the field footage from your own farm?', ta: 'வயல் காட்சிகள் உங்கள் சொந்த வயலிலிருந்து எடுக்கப்பட்டவையா?' }, a: { en: 'The field footage is licensed stock media used to explain the rice lifecycle. It does not depict our own fields or mill.', ta: 'நெற்பயிரின் வாழ்க்கைச் சுழற்சியை விளக்க உரிமம் பெற்ற பொதுப் பயன்பாட்டுக் காட்சிகள் பயன்படுத்தப்பட்டுள்ளன. இவை வாடிக்கையாளரின் சொந்த வயல்களையோ ஆலையையோ காட்டவில்லை.' } },
 ];
