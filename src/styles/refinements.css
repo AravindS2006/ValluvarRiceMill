@@ -1,0 +1,82 @@
+@layer responsive {
+  /* Preserve the complete client packaging photographs at every breakpoint. */
+  .product-card.has-bag .product-art {
+    height: 560px;
+    padding: 0;
+    background: #e8edee;
+    isolation: isolate;
+  }
+  .product-card.has-bag.gold .product-art { background: #cbd0d3; }
+  .product-card.has-bag .product-art > img {
+    position: static;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transform: none;
+  }
+  .product-card.has-bag .product-number { z-index: 1; }
+  .product-pack {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    border: 1px solid #64746c;
+    border-radius: 20px;
+    padding: 3px 12px;
+    background: #f7f6efcf;
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 650;
+  }
+  .product-dialog { max-width: min(860px, calc(100vw - 32px)); max-height: 90svh; overflow-y: auto; }
+  .product-dialog-body { display: grid; grid-template-columns: 1fr 1.1fr; align-items: center; gap: 30px; }
+  .product-dialog-body > img { width: 100%; height: 380px; object-fit: contain; }
+  .product-dialog-body h2 { margin: 18px 0; font-size: 40px; }
+  .product-dialog-body p { font-size: 12px; line-height: 1.85; color: var(--muted); }
+  .product-dialog-body .button { gap: 20px; padding: 14px 18px; font-size: 10px; }
+
+  /* Tamil needs room for vowel marks, without the previous oversized leading. */
+  html:lang(ta) .hero h1 {
+    font-size: clamp(42px, 4.8vw, 70px);
+    line-height: 1.25;
+    letter-spacing: -.025em;
+    margin: 24px 0 22px;
+  }
+  html:lang(ta) .hero h1 .hero-italic { font-style: normal; }
+  html:lang(ta) .hero h1 > span { line-height: inherit; }
+  html:lang(ta) .hero-description { line-height: 1.75; max-width: 430px; }
+  html:lang(ta) :is(.story-copy, .journey-teaser, .collection, .cta) h2 { line-height: 1.35; }
+  html:lang(ta) .story-copy > p:not(.eyebrow) { line-height: 1.8; }
+
+  .company-profile { display: grid; grid-template-columns: 1.1fr 1fr; gap: 8vw; padding-top: 0; }
+  .company-profile h2 { margin: 18px 0 24px; }
+  .company-profile > div > p:not(.eyebrow) { color: var(--muted); font-size: 13px; line-height: 1.9; }
+  .company-profile dl { margin: 0; }
+  .company-profile dl > div { border-top: 1px solid var(--line); padding: 18px 0; }
+  .company-profile dt { font-size: 9px; letter-spacing: .1em; color: var(--muted); margin-bottom: 7px; }
+  .company-profile dd { margin: 0; font-size: 14px; line-height: 1.8; }
+  .company-sources { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 24px; }
+  .ownership-note { font-size: 10px; color: var(--muted); margin-bottom: 20px; max-width: none; }
+  @media (max-width: 900px) {
+    .product-card.has-bag .product-art { height: 480px; }
+    html:lang(ta) .hero h1 { font-size: 42px; }
+    .company-profile { gap: 40px; }
+  }
+  @media (max-width: 650px) {
+    .product-card.has-bag .product-art { height: 440px; }
+    .product-pack { top: 18px; right: 18px; font-size: 9px; }
+    .product-dialog-body { grid-template-columns: 1fr; gap: 18px; }
+    .product-dialog-body > img { height: 250px; }
+    .product-dialog-body h2 { font-size: 32px; }
+    html:lang(ta) .hero-content { padding-top: 52px; }
+    html:lang(ta) .hero h1 { font-size: clamp(28px, 7.9vw, 34px); line-height: 1.28; margin: 20px 0; }
+    html:lang(ta) .hero-description { font-size: 11px; line-height: 1.75; max-width: 300px; }
+    html:lang(ta) .hero-buttons { margin-top: 22px; gap: 13px; }
+    .company-profile { grid-template-columns: 1fr; gap: 30px; }
+    .company-profile dd { font-size: 13px; }
+  }
+  @media (max-width: 380px) { .product-card.has-bag .product-art { height: 410px; } }
+}

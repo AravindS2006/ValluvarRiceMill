@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Page from '../components/Page.astro';
-import { pages, nav, pathFor, t, ui, type Locale, type PageKey } from '../data/site';
+import { pages, nav, routeFor, t, ui, type Locale, type PageKey } from '../data/site';
 export function getStaticPaths() {
-  return (['en', 'ta'] as Locale[]).flatMap(locale => pages.map(page => ({ params: { path: pathFor(page, locale).replace(/^\/|\/$/g, '') || undefined }, props: { locale, page } })));
+  return (['en', 'ta'] as Locale[]).flatMap(locale => pages.map(page => ({ params: { path: routeFor(page, locale).replace(/^\/|\/$/g, '') || undefined }, props: { locale, page } })));
 }
 interface Props { locale: Locale; page: PageKey }
 const { locale, page } = Astro.props; const c = ui[locale];

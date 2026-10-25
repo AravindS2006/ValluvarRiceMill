@@ -1,0 +1,54 @@
+[
+  {
+    "name": "boiled-rice-26kg",
+    "label": "Valluvar Brand Boiled Rice — 26 kg",
+    "source": "Client-provided photograph uploaded in this chat",
+    "sourceFilename": "codex-clipboard-65b7521b-27e8-46fd-ab39-551c4259b37d.png",
+    "sourceWidth": 765,
+    "sourceHeight": 1024,
+    "sourceSha256": "3ba7786e26982035a6af08147f8dddef829b0f274512af1edf2c9374d5b1bf4c",
+    "edits": "WebP quality 88 encoding; 480px variant uses proportional Lanczos resizing. Full bag, printed artwork, Tamil lettering, colors, and background retained. No cropping, retouching, AI regeneration, background changes, or upscaling.",
+    "variants": [
+      {
+        "src": "/media/products/boiled-rice-26kg.webp",
+        "width": 765,
+        "height": 1024,
+        "bytes": 126466,
+        "sha256": "be7b58261adad836b213e6d8c04c1581aedac1ea5c820a51a3a95693001176fa"
+      },
+      {
+        "src": "/media/products/boiled-rice-26kg-480.webp",
+        "width": 480,
+        "height": 643,
+        "bytes": 55282,
+        "sha256": "45105810b66732ca2ffc10bdfc61eb600c2b2e979221b47dab8e6096e91d0b5c"
+      }
+    ]
+  },
+  {
+    "name": "broken-rice-26kg",
+    "label": "Valluvar Brand Broken Rice — 26 kg",
+    "source": "Client-provided photograph uploaded in this chat",
+    "sourceFilename": "codex-clipboard-363fe5e6-d08b-401e-9950-34d2e9f4faeb.png",
+    "sourceWidth": 765,
+    "sourceHeight": 1024,
+    "sourceSha256": "0097d1c27023590ec21bc82f169ae90cfecbfbc87d0fd1d7f6bf08fcc2fc8e1e",
+    "edits": "WebP quality 88 encoding; 480px variant uses proportional Lanczos resizing. Full bag, printed artwork, Tamil lettering, colors, and background retained. No cropping, retouching, AI regeneration, background changes, or upscaling.",
+    "variants": [
+      {
+        "src": "/media/products/broken-rice-26kg.webp",
+        "width": 765,
+        "height": 1024,
+        "bytes": 114152,
+        "sha256": "e1e7a91e20e95b2c694d7f7aeee723cb2a69839fbf827deb9f3a98b959e1b4cc"
+      },
+      {
+        "src": "/media/products/broken-rice-26kg-480.webp",
+        "width": 480,
+        "height": 643,
+        "bytes": 48542,
+        "sha256": "518c5e46eacfd422aa923f622e85e13b7620a09707793704d1bb9973a557c994"
+      }
+    ]
+  }
+]

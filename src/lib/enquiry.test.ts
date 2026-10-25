@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { composeEnquiry, selectedProduct, validateEnquiry, whatsappLink, type Enquiry } from './enquiry';
 
-const valid: Enquiry = { name: 'A. Kumar', businessName: 'Kumar Stores', phone: '+91 98765 43210', product: 'rnr', quantity: '25', unit: 'bags', destination: 'Coimbatore', message: 'Please confirm availability & delivery.' };
+const valid: Enquiry = { name: 'A. Kumar', businessName: 'Kumar Stores', phone: '+91 98765 43210', product: 'boiled', quantity: '25', unit: 'bags', destination: 'Coimbatore', message: 'Please confirm availability & delivery.' };
 describe('wholesale enquiry', () => {
   it('accepts a complete enquiry with an international phone number', () => expect(validateEnquiry(valid, 'en')).toEqual({}));
   it('rejects missing details, invalid phone numbers and fractional bags', () => {
@@ -20,8 +20,8 @@ describe('wholesale enquiry', () => {
   });
   it('composes English and Tamil messages without dropping buyer details', () => {
     const english = composeEnquiry(valid, 'en'); const tamil = composeEnquiry(valid, 'ta');
-    expect(english).toContain('Rice: RNR Rice'); expect(english).toContain('Quantity: 25 bags');
-    expect(tamil).toContain('ஆர்.என்.ஆர்.'); expect(tamil).toContain('25 மூட்டைகள்');
+    expect(english).toContain('Rice: Boiled Rice'); expect(english).toContain('Quantity: 25 bags');
+    expect(tamil).toContain('புழுங்கல் அரிசி'); expect(tamil).toContain('25 மூட்டைகள்');
     expect(english).toContain(valid.message); expect(tamil).toContain(valid.destination);
   });
   it('handles help-me-choose and omits an empty optional message', () => {
@@ -36,7 +36,8 @@ describe('wholesale enquiry', () => {
     expect(new URL(link).searchParams.get('text')).toBe(message); expect(new URL(link).pathname).toBe('/919876543210');
   });
   it('only preselects known product identifiers from query strings', () => {
-    expect(selectedProduct('rnr')).toBe('rnr'); expect(selectedProduct('rajabogam')).toBe('rajabogam');
+    expect(selectedProduct('boiled')).toBe('boiled'); expect(selectedProduct('broken')).toBe('broken');
+    expect(selectedProduct('rnr')).toBe('choose');
     expect(selectedProduct(null)).toBe('choose'); expect(selectedProduct('<script>')).toBe('choose');
   });
 });

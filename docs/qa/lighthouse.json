@@ -1,16 +1,16 @@
 [
   {
     "path": "/",
-    "auditedAt": "2026-10-25T16:49:14.557Z",
+    "auditedAt": "2026-10-25T17:34:26.669Z",
     "lighthouseVersion": "12.8.2",
     "performance": 98,
     "accessibility": 100,
     "metrics": {
       "first-contentful-paint": "1.2 s",
-      "largest-contentful-paint": "2.3 s",
+      "largest-contentful-paint": "2.4 s",
       "total-blocking-time": "0 ms",
       "cumulative-layout-shift": "0",
-      "speed-index": "1.2 s"
+      "speed-index": "2.8 s"
     },
     "issues": [
       {
@@ -21,12 +21,17 @@
       {
         "id": "largest-contentful-paint",
         "title": "Largest Contentful Paint",
-        "score": 0.93
+        "score": 0.92
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "score": 0.96
       },
       {
         "id": "interactive",
         "title": "Time to Interactive",
-        "score": 0.99
+        "score": 0.98
       },
       {
         "id": "network-dependency-tree-insight",
@@ -38,38 +43,38 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "40E4E76EE2B16B037F2195DF1BD57283": {
+                "1E00245C94A7E6038D6A2D2155ED5A73": {
                   "url": "http://127.0.0.1:4322/",
-                  "navStartToEndTime": 36,
-                  "transferSize": 4736,
+                  "navStartToEndTime": 39,
+                  "transferSize": 4879,
                   "isLongest": true,
                   "children": {
-                    "24124.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-                      "navStartToEndTime": 62,
-                      "transferSize": 13178,
+                    "21640.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+                      "navStartToEndTime": 75,
+                      "transferSize": 13718,
                       "isLongest": true,
                       "children": {
-                        "24124.24": {
+                        "21640.26": {
                           "url": "http://127.0.0.1:4322/_astro/fraunces-latin-wght-italic.Py8at3oI.woff2",
-                          "navStartToEndTime": 239,
+                          "navStartToEndTime": 276,
                           "transferSize": 45976,
                           "isLongest": true,
                           "children": {}
                         }
                       }
                     },
-                    "24124.6": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.VWncgFOg.js",
-                      "navStartToEndTime": 62,
-                      "transferSize": 10824,
+                    "21640.6": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.D2F9KHAJ.js",
+                      "navStartToEndTime": 77,
+                      "transferSize": 11294,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 239
+                "duration": 276
               }
             }
           },
@@ -111,7 +116,7 @@
               {
                 "node": {
                   "type": "node",
-                  "lhId": "page-2-IMG",
+                  "lhId": "page-5-IMG",
                   "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,0,DIV,0,IMG",
                   "selector": "main#main > section.hero > div.video-shell > img.video-poster",
                   "boundingRect": {
@@ -150,7 +155,7 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 458.4817,
+                "timing": 464.76155,
                 "percent": "20%"
               },
               {
@@ -165,7 +170,7 @@
               },
               {
                 "phase": "Render Delay",
-                "timing": 1816.9634000000003,
+                "timing": 1904.5230999999997,
                 "percent": "80%"
               }
             ]
@@ -193,28 +198,28 @@
               {
                 "subpart": "timeToFirstByte",
                 "label": "Time to first byte",
-                "duration": 10.72
+                "duration": 14.672000003814697
               },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 23.022
+                "duration": 20.4179999961853
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 28.022
+                "duration": 46.608
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 464.972
+                "duration": 1320.251
               }
             ]
           },
           {
             "type": "node",
-            "lhId": "page-2-IMG",
+            "lhId": "page-5-IMG",
             "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,0,DIV,0,IMG",
             "selector": "main#main > section.hero > div.video-shell > img.video-poster",
             "boundingRect": {
@@ -252,7 +257,7 @@
           },
           {
             "type": "node",
-            "lhId": "page-2-IMG",
+            "lhId": "page-5-IMG",
             "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,0,DIV,0,IMG",
             "selector": "main#main > section.hero > div.video-shell > img.video-poster",
             "boundingRect": {
@@ -276,38 +281,38 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "40E4E76EE2B16B037F2195DF1BD57283": {
+                "1E00245C94A7E6038D6A2D2155ED5A73": {
                   "url": "http://127.0.0.1:4322/",
-                  "navStartToEndTime": 36,
-                  "transferSize": 4736,
+                  "navStartToEndTime": 39,
+                  "transferSize": 4879,
                   "isLongest": true,
                   "children": {
-                    "24124.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-                      "navStartToEndTime": 62,
-                      "transferSize": 13178,
+                    "21640.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+                      "navStartToEndTime": 75,
+                      "transferSize": 13718,
                       "isLongest": true,
                       "children": {
-                        "24124.24": {
+                        "21640.26": {
                           "url": "http://127.0.0.1:4322/_astro/fraunces-latin-wght-italic.Py8at3oI.woff2",
-                          "navStartToEndTime": 239,
+                          "navStartToEndTime": 276,
                           "transferSize": 45976,
                           "isLongest": true,
                           "children": {}
                         }
                       }
                     },
-                    "24124.6": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.VWncgFOg.js",
-                      "navStartToEndTime": 62,
-                      "transferSize": 10824,
+                    "21640.6": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.D2F9KHAJ.js",
+                      "navStartToEndTime": 77,
+                      "transferSize": 11294,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 239
+                "duration": 276
               }
             }
           },
@@ -352,9 +357,9 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-            "totalBytes": 13178,
-            "wastedMs": 158
+            "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+            "totalBytes": 13718,
+            "wastedMs": 165
           }
         ]
       }
@@ -362,16 +367,16 @@
   },
   {
     "path": "/ta/",
-    "auditedAt": "2026-10-25T16:49:27.127Z",
+    "auditedAt": "2026-10-25T17:34:36.772Z",
     "lighthouseVersion": "12.8.2",
-    "performance": 96,
+    "performance": 97,
     "accessibility": 100,
     "metrics": {
       "first-contentful-paint": "1.2 s",
-      "largest-contentful-paint": "2.5 s",
+      "largest-contentful-paint": "2.6 s",
       "total-blocking-time": "0 ms",
       "cumulative-layout-shift": "0",
-      "speed-index": "3.6 s"
+      "speed-index": "1.2 s"
     },
     "issues": [
       {
@@ -382,12 +387,7 @@
       {
         "id": "largest-contentful-paint",
         "title": "Largest Contentful Paint",
-        "score": 0.89
-      },
-      {
-        "id": "speed-index",
-        "title": "Speed Index",
-        "score": 0.87
+        "score": 0.88
       },
       {
         "id": "interactive",
@@ -404,38 +404,38 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "BC3246E0A8BC5C4352FB0E8BE438BCFA": {
+                "0D3041E4AF5E11DAAA2C91A7B547F70B": {
                   "url": "http://127.0.0.1:4322/ta/",
-                  "navStartToEndTime": 36,
-                  "transferSize": 5206,
+                  "navStartToEndTime": 25,
+                  "transferSize": 5387,
                   "isLongest": true,
                   "children": {
-                    "24936.5": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-                      "navStartToEndTime": 61,
-                      "transferSize": 13178,
+                    "11968.5": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+                      "navStartToEndTime": 40,
+                      "transferSize": 13718,
                       "isLongest": true,
                       "children": {
-                        "24936.26": {
+                        "11968.28": {
                           "url": "http://127.0.0.1:4322/_astro/fraunces-latin-wght-italic.Py8at3oI.woff2",
-                          "navStartToEndTime": 296,
+                          "navStartToEndTime": 192,
                           "transferSize": 45976,
                           "isLongest": true,
                           "children": {}
                         }
                       }
                     },
-                    "24936.7": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.VWncgFOg.js",
-                      "navStartToEndTime": 67,
-                      "transferSize": 10824,
+                    "11968.7": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.D2F9KHAJ.js",
+                      "navStartToEndTime": 41,
+                      "transferSize": 11294,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 296
+                "duration": 192
               }
             }
           },
@@ -477,7 +477,7 @@
               {
                 "node": {
                   "type": "node",
-                  "lhId": "page-2-IMG",
+                  "lhId": "page-5-IMG",
                   "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,0,DIV,0,IMG",
                   "selector": "main#main > section.hero > div.video-shell > img.video-poster",
                   "boundingRect": {
@@ -516,7 +516,7 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 458.93595,
+                "timing": 458.40425,
                 "percent": "18%"
               },
               {
@@ -531,7 +531,7 @@
               },
               {
                 "phase": "Render Delay",
-                "timing": 2042.8719,
+                "timing": 2116.8085,
                 "percent": "82%"
               }
             ]
@@ -559,28 +559,28 @@
               {
                 "subpart": "timeToFirstByte",
                 "label": "Time to first byte",
-                "duration": 11.299
+                "duration": 7.125
               },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 19.618
+                "duration": 13.342
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 28.743
+                "duration": 17.886
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 2158.83
+                "duration": 195.612
               }
             ]
           },
           {
             "type": "node",
-            "lhId": "page-2-IMG",
+            "lhId": "page-5-IMG",
             "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,0,DIV,0,IMG",
             "selector": "main#main > section.hero > div.video-shell > img.video-poster",
             "boundingRect": {
@@ -618,7 +618,7 @@
           },
           {
             "type": "node",
-            "lhId": "page-2-IMG",
+            "lhId": "page-5-IMG",
             "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,0,DIV,0,IMG",
             "selector": "main#main > section.hero > div.video-shell > img.video-poster",
             "boundingRect": {
@@ -642,38 +642,38 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "BC3246E0A8BC5C4352FB0E8BE438BCFA": {
+                "0D3041E4AF5E11DAAA2C91A7B547F70B": {
                   "url": "http://127.0.0.1:4322/ta/",
-                  "navStartToEndTime": 36,
-                  "transferSize": 5206,
+                  "navStartToEndTime": 25,
+                  "transferSize": 5387,
                   "isLongest": true,
                   "children": {
-                    "24936.5": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-                      "navStartToEndTime": 61,
-                      "transferSize": 13178,
+                    "11968.5": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+                      "navStartToEndTime": 40,
+                      "transferSize": 13718,
                       "isLongest": true,
                       "children": {
-                        "24936.26": {
+                        "11968.28": {
                           "url": "http://127.0.0.1:4322/_astro/fraunces-latin-wght-italic.Py8at3oI.woff2",
-                          "navStartToEndTime": 296,
+                          "navStartToEndTime": 192,
                           "transferSize": 45976,
                           "isLongest": true,
                           "children": {}
                         }
                       }
                     },
-                    "24936.7": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.VWncgFOg.js",
-                      "navStartToEndTime": 67,
-                      "transferSize": 10824,
+                    "11968.7": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.D2F9KHAJ.js",
+                      "navStartToEndTime": 41,
+                      "transferSize": 11294,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 296
+                "duration": 192
               }
             }
           },
@@ -718,9 +718,9 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-            "totalBytes": 13178,
-            "wastedMs": 159
+            "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+            "totalBytes": 13718,
+            "wastedMs": 158
           }
         ]
       }
@@ -728,7 +728,7 @@
   },
   {
     "path": "/contact/",
-    "auditedAt": "2026-10-25T16:49:37.755Z",
+    "auditedAt": "2026-10-25T17:34:45.564Z",
     "lighthouseVersion": "12.8.2",
     "performance": 100,
     "accessibility": 100,
@@ -755,30 +755,30 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "6ADD9706E5F784A0F2ED2328377DB520": {
+                "A7B37C035998DA9B55A4AA226F6C9924": {
                   "url": "http://127.0.0.1:4322/contact/",
                   "navStartToEndTime": 23,
-                  "transferSize": 3860,
+                  "transferSize": 3935,
                   "isLongest": true,
                   "children": {
-                    "20772.5": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.VWncgFOg.js",
-                      "navStartToEndTime": 39,
-                      "transferSize": 10824,
+                    "25524.5": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.D2F9KHAJ.js",
+                      "navStartToEndTime": 36,
+                      "transferSize": 11294,
                       "isLongest": true,
                       "children": {}
                     },
-                    "20772.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-                      "navStartToEndTime": 38,
-                      "transferSize": 13178,
+                    "25524.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+                      "navStartToEndTime": 34,
+                      "transferSize": 13718,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 39
+                "duration": 36
               }
             }
           },
@@ -859,7 +859,7 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 456.11965,
+                "timing": 457.3375,
                 "percent": "29%"
               },
               {
@@ -874,7 +874,7 @@
               },
               {
                 "phase": "Render Delay",
-                "timing": 1131.11965,
+                "timing": 1132.3375,
                 "percent": "71%"
               }
             ]
@@ -902,12 +902,12 @@
               {
                 "subpart": "timeToFirstByte",
                 "label": "Time to first byte",
-                "duration": 8.564
+                "duration": 6.741
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 277.401
+                "duration": 316.64
               }
             ]
           },
@@ -937,30 +937,30 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "6ADD9706E5F784A0F2ED2328377DB520": {
+                "A7B37C035998DA9B55A4AA226F6C9924": {
                   "url": "http://127.0.0.1:4322/contact/",
                   "navStartToEndTime": 23,
-                  "transferSize": 3860,
+                  "transferSize": 3935,
                   "isLongest": true,
                   "children": {
-                    "20772.5": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.VWncgFOg.js",
-                      "navStartToEndTime": 39,
-                      "transferSize": 10824,
+                    "25524.5": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.D2F9KHAJ.js",
+                      "navStartToEndTime": 36,
+                      "transferSize": 11294,
                       "isLongest": true,
                       "children": {}
                     },
-                    "20772.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-                      "navStartToEndTime": 38,
-                      "transferSize": 13178,
+                    "25524.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+                      "navStartToEndTime": 34,
+                      "transferSize": 13718,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 39
+                "duration": 36
               }
             }
           },
@@ -1005,9 +1005,9 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-            "totalBytes": 13178,
-            "wastedMs": 156
+            "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+            "totalBytes": 13718,
+            "wastedMs": 157
           }
         ]
       }
@@ -1015,22 +1015,37 @@
   },
   {
     "path": "/journey/",
-    "auditedAt": "2026-10-25T16:49:46.565Z",
+    "auditedAt": "2026-10-25T17:34:54.174Z",
     "lighthouseVersion": "12.8.2",
-    "performance": 100,
+    "performance": 97,
     "accessibility": 100,
     "metrics": {
-      "first-contentful-paint": "0.9 s",
+      "first-contentful-paint": "1.0 s",
       "largest-contentful-paint": "1.7 s",
-      "total-blocking-time": "0 ms",
+      "total-blocking-time": "110 ms",
       "cumulative-layout-shift": "0",
-      "speed-index": "0.9 s"
+      "speed-index": "3.7 s"
     },
     "issues": [
       {
         "id": "largest-contentful-paint",
         "title": "Largest Contentful Paint",
         "score": 0.99
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "score": 0.86
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "score": 0.97
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "score": 0.28
       },
       {
         "id": "network-dependency-tree-insight",
@@ -1042,30 +1057,30 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "97A6F3362EA0286BECC9CE213988CB7D": {
+                "03448E81081CA54C92D7118C09F9FD7B": {
                   "url": "http://127.0.0.1:4322/journey/",
-                  "navStartToEndTime": 29,
-                  "transferSize": 8297,
+                  "navStartToEndTime": 40,
+                  "transferSize": 8458,
                   "isLongest": true,
                   "children": {
-                    "20556.5": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.VWncgFOg.js",
-                      "navStartToEndTime": 39,
-                      "transferSize": 10824,
+                    "20748.5": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.D2F9KHAJ.js",
+                      "navStartToEndTime": 53,
+                      "transferSize": 11294,
                       "isLongest": true,
                       "children": {}
                     },
-                    "20556.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-                      "navStartToEndTime": 38,
-                      "transferSize": 13178,
+                    "20748.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+                      "navStartToEndTime": 49,
+                      "transferSize": 13718,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 39
+                "duration": 53
               }
             }
           },
@@ -1146,7 +1161,7 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 456.30625,
+                "timing": 457.58175,
                 "percent": "27%"
               },
               {
@@ -1161,7 +1176,7 @@
               },
               {
                 "phase": "Render Delay",
-                "timing": 1206.30625,
+                "timing": 1207.58175,
                 "percent": "73%"
               }
             ]
@@ -1189,12 +1204,12 @@
               {
                 "subpart": "timeToFirstByte",
                 "label": "Time to first byte",
-                "duration": 8.514
+                "duration": 11.913000003814698
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 183.019
+                "duration": 2275.0339999961852
               }
             ]
           },
@@ -1224,30 +1239,30 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "97A6F3362EA0286BECC9CE213988CB7D": {
+                "03448E81081CA54C92D7118C09F9FD7B": {
                   "url": "http://127.0.0.1:4322/journey/",
-                  "navStartToEndTime": 29,
-                  "transferSize": 8297,
+                  "navStartToEndTime": 40,
+                  "transferSize": 8458,
                   "isLongest": true,
                   "children": {
-                    "20556.5": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.VWncgFOg.js",
-                      "navStartToEndTime": 39,
-                      "transferSize": 10824,
+                    "20748.5": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.D2F9KHAJ.js",
+                      "navStartToEndTime": 53,
+                      "transferSize": 11294,
                       "isLongest": true,
                       "children": {}
                     },
-                    "20556.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-                      "navStartToEndTime": 38,
-                      "transferSize": 13178,
+                    "20748.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+                      "navStartToEndTime": 49,
+                      "transferSize": 13718,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 39
+                "duration": 53
               }
             }
           },
@@ -1292,9 +1307,9 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4322/_astro/_path_.ndFqra4g.css",
-            "totalBytes": 13178,
-            "wastedMs": 156
+            "url": "http://127.0.0.1:4322/_astro/_path_.mhtzkSsX.css",
+            "totalBytes": 13718,
+            "wastedMs": 158
           }
         ]
       }
