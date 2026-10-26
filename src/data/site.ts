@@ -48,7 +48,7 @@ export const ui = {
     chapterLink: 'Explore the whole journey', collectionTag: 'THE VALLUVAR COLLECTION', collectionTitle: 'Find your everyday grain.',
     collectionBody: 'A starting point for your next wholesale conversation. Tell us what your business needs.',
     collectionLink: 'Explore our rice', details: 'Discover this rice',
-    draftNote: "Special Amark Rajabogam in 26 kg bags and Rajabogam Rice in 25 kg bags. Ask us about availability, quantities, and wholesale pricing.",
+    draftNote: "Special Agmark Rajabogam in 26 kg bags and Rajabogam Rice in 25 kg bags. Ask us about availability, quantities, and wholesale pricing.",
     pack: 'PACK SIZE', request: 'Enquire about this rice', close: 'Close',
     ctaTag: 'LET’S START A CONVERSATION', ctaTitle: 'Good rice.\nBetter connections.',
     ctaBody: 'For retailers, restaurants, and wholesale buyers. Share your requirements and let’s take the next step.',
@@ -85,7 +85,7 @@ export const ui = {
     processBody: 'Rice milling removes the husk and, for white rice, the bran. Cleaning, drying, milling, and grading each play a part in preparing rice. This is an introduction to the general process; specific equipment and practices at the mill await confirmation.',
     placeTag: 'FIND OUR ROOTS', placeTitle: 'Dharapuram,\nTamil Nadu.', placeBody: "Our manufacturing operations are based on Palani Road, Achiyur Post, Dharapuram, Tamil Nadu. Follow our map pin for directions and contact our team before visiting.",
     source: 'Source: Acuité business profile, 4 November 2022',
-    riceTitle: 'Rice for the\neveryday & beyond.', riceIntro: "Meet Valluvar Brand Special Amark Rajabogam in the gold 26 kg bag and Rajabogam Rice in the yellow 25 kg bag.",
+    riceTitle: 'Rice for the\neveryday & beyond.', riceIntro: "Meet Valluvar Brand Special Agmark Rajabogam in the gold 26 kg bag and Rajabogam Rice in the yellow 25 kg bag.",
     riceGuideTitle: 'The right rice starts\nwith a conversation.',
     riceGuideBody: 'Tell us your preferred variety, pack size, quantity, and destination. Current availability, specifications, and pricing will be confirmed directly.',
     galleryTitle: 'A closer look\nat the journey.', galleryIntro: 'Light on a paddy field. The rhythm of planting. Grain ready for harvest. An illustrated field notebook.',
@@ -195,7 +195,7 @@ export const ui = {
 };
 export const products = [
   {
-    id: 'boiled', name: { en: 'Special Amark Rajabogam', ta: 'ஸ்பெஷல் அக்மார்க் ராஜபோகம்' },
+    id: 'boiled', name: { en: 'Special Agmark Rajabogam', ta: 'ஸ்பெஷல் அக்மார்க் ராஜபோகம்' },
     subtitle: { en: 'Valluvar Brand · Boiled rice', ta: 'வள்ளுவர் பிராண்ட் · புழுங்கல் அரிசி' },
     packKg: 26, status: 'confirmed' as const, accent: 'gold',
     image: '/media/products/boiled-rice-26kg.webp', imageSmall: '/media/products/boiled-rice-26kg-480.webp',
