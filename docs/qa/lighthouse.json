@@ -1,32 +1,27 @@
 [
   {
     "path": "/",
-    "auditedAt": "2026-10-26T02:01:05.504Z",
+    "auditedAt": "2026-10-26T02:28:58.458Z",
     "lighthouseVersion": "12.8.2",
     "performance": 97,
     "accessibility": 100,
     "metrics": {
-      "first-contentful-paint": "1.3 s",
+      "first-contentful-paint": "1.4 s",
       "largest-contentful-paint": "2.4 s",
       "total-blocking-time": "0 ms",
       "cumulative-layout-shift": "0",
-      "speed-index": "3.0 s"
+      "speed-index": "1.9 s"
     },
     "issues": [
       {
         "id": "first-contentful-paint",
         "title": "First Contentful Paint",
-        "score": 0.99
+        "score": 0.97
       },
       {
         "id": "largest-contentful-paint",
         "title": "Largest Contentful Paint",
-        "score": 0.92
-      },
-      {
-        "id": "speed-index",
-        "title": "Speed Index",
-        "score": 0.94
+        "score": 0.91
       },
       {
         "id": "interactive",
@@ -43,38 +38,38 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "39E7C96EFC67C43D5FBBBCEE7723582A": {
+                "311F7D8F5FFD83F6A6996F3235197685": {
                   "url": "http://127.0.0.1:4322/",
-                  "navStartToEndTime": 39,
-                  "transferSize": 5008,
+                  "navStartToEndTime": 52,
+                  "transferSize": 5719,
                   "isLongest": true,
                   "children": {
-                    "10344.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-                      "navStartToEndTime": 65,
-                      "transferSize": 13832,
+                    "8656.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 94,
+                      "transferSize": 14685,
                       "isLongest": true,
                       "children": {
-                        "10344.24": {
+                        "8656.25": {
                           "url": "http://127.0.0.1:4322/_astro/fraunces-latin-wght-italic.Py8at3oI.woff2",
-                          "navStartToEndTime": 100,
+                          "navStartToEndTime": 343,
                           "transferSize": 45976,
                           "isLongest": true,
                           "children": {}
                         }
                       }
                     },
-                    "10344.6": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.DdagxuXT.js",
-                      "navStartToEndTime": 67,
-                      "transferSize": 11439,
+                    "8656.6": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 96,
+                      "transferSize": 12239,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 100
+                "duration": 343
               }
             }
           },
@@ -155,7 +150,7 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 467.09145,
+                "timing": 475.11705,
                 "percent": "20%"
               },
               {
@@ -170,7 +165,7 @@
               },
               {
                 "phase": "Render Delay",
-                "timing": 1909.1828999999998,
+                "timing": 1925.2340999999994,
                 "percent": "80%"
               }
             ]
@@ -198,22 +193,22 @@
               {
                 "subpart": "timeToFirstByte",
                 "label": "Time to first byte",
-                "duration": 14.075999999761581
+                "duration": 18.496
               },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 18.949000000238417
+                "duration": 28.17
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 30.995
+                "duration": 56.428
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 1477.4
+                "duration": 649.696
               }
             ]
           },
@@ -281,38 +276,38 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "39E7C96EFC67C43D5FBBBCEE7723582A": {
+                "311F7D8F5FFD83F6A6996F3235197685": {
                   "url": "http://127.0.0.1:4322/",
-                  "navStartToEndTime": 39,
-                  "transferSize": 5008,
+                  "navStartToEndTime": 52,
+                  "transferSize": 5719,
                   "isLongest": true,
                   "children": {
-                    "10344.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-                      "navStartToEndTime": 65,
-                      "transferSize": 13832,
+                    "8656.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 94,
+                      "transferSize": 14685,
                       "isLongest": true,
                       "children": {
-                        "10344.24": {
+                        "8656.25": {
                           "url": "http://127.0.0.1:4322/_astro/fraunces-latin-wght-italic.Py8at3oI.woff2",
-                          "navStartToEndTime": 100,
+                          "navStartToEndTime": 343,
                           "transferSize": 45976,
                           "isLongest": true,
                           "children": {}
                         }
                       }
                     },
-                    "10344.6": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.DdagxuXT.js",
-                      "navStartToEndTime": 67,
-                      "transferSize": 11439,
+                    "8656.6": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 96,
+                      "transferSize": 12239,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 100
+                "duration": 343
               }
             }
           },
@@ -357,9 +352,9 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-            "totalBytes": 13832,
-            "wastedMs": 167
+            "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+            "totalBytes": 14685,
+            "wastedMs": 325
           }
         ]
       }
@@ -367,27 +362,32 @@
   },
   {
     "path": "/ta/",
-    "auditedAt": "2026-10-26T02:01:16.895Z",
+    "auditedAt": "2026-10-26T02:29:12.875Z",
     "lighthouseVersion": "12.8.2",
-    "performance": 97,
+    "performance": 95,
     "accessibility": 100,
     "metrics": {
-      "first-contentful-paint": "1.2 s",
-      "largest-contentful-paint": "2.5 s",
+      "first-contentful-paint": "1.4 s",
+      "largest-contentful-paint": "2.6 s",
       "total-blocking-time": "0 ms",
       "cumulative-layout-shift": "0",
-      "speed-index": "1.2 s"
+      "speed-index": "4.0 s"
     },
     "issues": [
       {
         "id": "first-contentful-paint",
         "title": "First Contentful Paint",
-        "score": 0.99
+        "score": 0.97
       },
       {
         "id": "largest-contentful-paint",
         "title": "Largest Contentful Paint",
-        "score": 0.89
+        "score": 0.87
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "score": 0.81
       },
       {
         "id": "interactive",
@@ -404,38 +404,38 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "217C6FD60C1814BDEC36A7809AE1AF81": {
+                "541C79E9B2DEEAB344EE8C00A8CA4B7D": {
                   "url": "http://127.0.0.1:4322/ta/",
-                  "navStartToEndTime": 24,
-                  "transferSize": 5506,
+                  "navStartToEndTime": 31,
+                  "transferSize": 6371,
                   "isLongest": true,
                   "children": {
-                    "7860.5": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-                      "navStartToEndTime": 41,
-                      "transferSize": 13832,
+                    "10676.5": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 56,
+                      "transferSize": 14685,
                       "isLongest": true,
                       "children": {
-                        "7860.26": {
+                        "10676.27": {
                           "url": "http://127.0.0.1:4322/_astro/fraunces-latin-wght-italic.Py8at3oI.woff2",
-                          "navStartToEndTime": 221,
+                          "navStartToEndTime": 276,
                           "transferSize": 45976,
                           "isLongest": true,
                           "children": {}
                         }
                       }
                     },
-                    "7860.7": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.DdagxuXT.js",
-                      "navStartToEndTime": 43,
-                      "transferSize": 11439,
+                    "10676.7": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 58,
+                      "transferSize": 12239,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 221
+                "duration": 276
               }
             }
           },
@@ -516,7 +516,7 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 462.44025,
+                "timing": 469.30755,
                 "percent": "18%"
               },
               {
@@ -531,7 +531,7 @@
               },
               {
                 "phase": "Render Delay",
-                "timing": 2049.8804999999998,
+                "timing": 2138.6151,
                 "percent": "82%"
               }
             ]
@@ -559,22 +559,22 @@
               {
                 "subpart": "timeToFirstByte",
                 "label": "Time to first byte",
-                "duration": 7.496
+                "duration": 8.653
               },
               {
                 "subpart": "resourceLoadDelay",
                 "label": "Resource load delay",
-                "duration": 13.31
+                "duration": 16.139
               },
               {
                 "subpart": "resourceLoadDuration",
                 "label": "Resource load duration",
-                "duration": 18.555
+                "duration": 28.435
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 222.297
+                "duration": 2194.77
               }
             ]
           },
@@ -642,38 +642,38 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "217C6FD60C1814BDEC36A7809AE1AF81": {
+                "541C79E9B2DEEAB344EE8C00A8CA4B7D": {
                   "url": "http://127.0.0.1:4322/ta/",
-                  "navStartToEndTime": 24,
-                  "transferSize": 5506,
+                  "navStartToEndTime": 31,
+                  "transferSize": 6371,
                   "isLongest": true,
                   "children": {
-                    "7860.5": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-                      "navStartToEndTime": 41,
-                      "transferSize": 13832,
+                    "10676.5": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 56,
+                      "transferSize": 14685,
                       "isLongest": true,
                       "children": {
-                        "7860.26": {
+                        "10676.27": {
                           "url": "http://127.0.0.1:4322/_astro/fraunces-latin-wght-italic.Py8at3oI.woff2",
-                          "navStartToEndTime": 221,
+                          "navStartToEndTime": 276,
                           "transferSize": 45976,
                           "isLongest": true,
                           "children": {}
                         }
                       }
                     },
-                    "7860.7": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.DdagxuXT.js",
-                      "navStartToEndTime": 43,
-                      "transferSize": 11439,
+                    "10676.7": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 58,
+                      "transferSize": 12239,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 221
+                "duration": 276
               }
             }
           },
@@ -718,26 +718,26 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-            "totalBytes": 13832,
-            "wastedMs": 162
+            "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+            "totalBytes": 14685,
+            "wastedMs": 319
           }
         ]
       }
     }
   },
   {
-    "path": "/journey/",
-    "auditedAt": "2026-10-26T02:01:26.135Z",
+    "path": "/rice/",
+    "auditedAt": "2026-10-26T02:29:25.285Z",
     "lighthouseVersion": "12.8.2",
-    "performance": 100,
+    "performance": 99,
     "accessibility": 100,
     "metrics": {
-      "first-contentful-paint": "1.0 s",
+      "first-contentful-paint": "0.9 s",
       "largest-contentful-paint": "1.7 s",
-      "total-blocking-time": "20 ms",
+      "total-blocking-time": "30 ms",
       "cumulative-layout-shift": "0",
-      "speed-index": "2.2 s"
+      "speed-index": "3.5 s"
     },
     "issues": [
       {
@@ -748,12 +748,52 @@
       {
         "id": "speed-index",
         "title": "Speed Index",
-        "score": 0.99
+        "score": 0.88
       },
       {
         "id": "max-potential-fid",
         "title": "Max Potential First Input Delay",
-        "score": 0.57
+        "score": 0.35
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "score": 0,
+        "items": [
+          {
+            "type": "checklist",
+            "items": {
+              "priorityHinted": {
+                "label": "fetchpriority=high should be applied",
+                "value": false
+              },
+              "requestDiscoverable": {
+                "label": "Request is discoverable in initial document",
+                "value": false
+              },
+              "eagerlyLoaded": {
+                "label": "lazy load not applied",
+                "value": false
+              }
+            }
+          },
+          {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,2,MAIN,1,SECTION,1,DIV,0,ARTICLE,0,DIV,2,IMG",
+            "selector": "div.product-grid > article#rice-boiled > div.product-art > img",
+            "boundingRect": {
+              "top": 462,
+              "bottom": 902,
+              "left": 24,
+              "right": 388,
+              "width": 364,
+              "height": 440
+            },
+            "snippet": "<img src=\"/media/products/boiled-rice-26kg.webp\" srcset=\"/media/products/boiled-rice-26kg-480.webp 480w, /media/products/boiled-ric…\" sizes=\"(max-width: 650px) 90vw, 40vw\" alt=\"Valluvar Brand Boiled Rice 26 kg bag\" loading=\"lazy\" width=\"765\" height=\"1024\">",
+            "nodeLabel": "Valluvar Brand Boiled Rice 26 kg bag"
+          }
+        ]
       },
       {
         "id": "network-dependency-tree-insight",
@@ -765,30 +805,375 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "5828A4DF1CDE2447E00F9BDCEFB6B513": {
-                  "url": "http://127.0.0.1:4322/journey/",
-                  "navStartToEndTime": 35,
-                  "transferSize": 8589,
+                "560F0BDA9EF83FB114124C2EE9A5E8B2": {
+                  "url": "http://127.0.0.1:4322/rice/",
+                  "navStartToEndTime": 25,
+                  "transferSize": 4074,
                   "isLongest": true,
                   "children": {
-                    "6632.5": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.DdagxuXT.js",
-                      "navStartToEndTime": 45,
-                      "transferSize": 11439,
+                    "3020.5": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 39,
+                      "transferSize": 12239,
                       "isLongest": true,
                       "children": {}
                     },
-                    "6632.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-                      "navStartToEndTime": 44,
-                      "transferSize": 13832,
+                    "3020.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 39,
+                      "transferSize": 14685,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 45
+                "duration": 39
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      }
+    ],
+    "analysis": {
+      "largest-contentful-paint-element": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-0-IMG",
+                  "path": "1,HTML,1,BODY,2,MAIN,1,SECTION,1,DIV,0,ARTICLE,0,DIV,2,IMG",
+                  "selector": "div.product-grid > article#rice-boiled > div.product-art > img",
+                  "boundingRect": {
+                    "top": 462,
+                    "bottom": 902,
+                    "left": 24,
+                    "right": 388,
+                    "width": 364,
+                    "height": 440
+                  },
+                  "snippet": "<img src=\"/media/products/boiled-rice-26kg.webp\" srcset=\"/media/products/boiled-rice-26kg-480.webp 480w, /media/products/boiled-ric…\" sizes=\"(max-width: 650px) 90vw, 40vw\" alt=\"Valluvar Brand Boiled Rice 26 kg bag\" loading=\"lazy\" width=\"765\" height=\"1024\">",
+                  "nodeLabel": "Valluvar Brand Boiled Rice 26 kg bag"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "phase",
+                "valueType": "text",
+                "label": "Phase"
+              },
+              {
+                "key": "percent",
+                "valueType": "text",
+                "label": "% of LCP"
+              },
+              {
+                "key": "timing",
+                "valueType": "ms",
+                "label": "Timing"
+              }
+            ],
+            "items": [
+              {
+                "phase": "TTFB",
+                "timing": 458.23765,
+                "percent": "27%"
+              },
+              {
+                "phase": "Load Delay",
+                "timing": 419.13711200479867,
+                "percent": "25%"
+              },
+              {
+                "phase": "Load Time",
+                "timing": 11.203475815331558,
+                "percent": "1%"
+              },
+              {
+                "phase": "Render Delay",
+                "timing": 777.8970621798699,
+                "percent": "47%"
+              }
+            ]
+          }
+        ]
+      },
+      "lcp-breakdown-insight": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "label",
+                "valueType": "text",
+                "label": "Subpart"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 7.742
+              },
+              {
+                "subpart": "resourceLoadDelay",
+                "label": "Resource load delay",
+                "duration": 1188.871
+              },
+              {
+                "subpart": "resourceLoadDuration",
+                "label": "Resource load duration",
+                "duration": 17.189
+              },
+              {
+                "subpart": "elementRenderDelay",
+                "label": "Element render delay",
+                "duration": 1062.611
+              }
+            ]
+          },
+          {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,2,MAIN,1,SECTION,1,DIV,0,ARTICLE,0,DIV,2,IMG",
+            "selector": "div.product-grid > article#rice-boiled > div.product-art > img",
+            "boundingRect": {
+              "top": 462,
+              "bottom": 902,
+              "left": 24,
+              "right": 388,
+              "width": 364,
+              "height": 440
+            },
+            "snippet": "<img src=\"/media/products/boiled-rice-26kg.webp\" srcset=\"/media/products/boiled-rice-26kg-480.webp 480w, /media/products/boiled-ric…\" sizes=\"(max-width: 650px) 90vw, 40vw\" alt=\"Valluvar Brand Boiled Rice 26 kg bag\" loading=\"lazy\" width=\"765\" height=\"1024\">",
+            "nodeLabel": "Valluvar Brand Boiled Rice 26 kg bag"
+          }
+        ]
+      },
+      "lcp-discovery-insight": {
+        "type": "list",
+        "items": [
+          {
+            "type": "checklist",
+            "items": {
+              "priorityHinted": {
+                "label": "fetchpriority=high should be applied",
+                "value": false
+              },
+              "requestDiscoverable": {
+                "label": "Request is discoverable in initial document",
+                "value": false
+              },
+              "eagerlyLoaded": {
+                "label": "lazy load not applied",
+                "value": false
+              }
+            }
+          },
+          {
+            "type": "node",
+            "lhId": "page-0-IMG",
+            "path": "1,HTML,1,BODY,2,MAIN,1,SECTION,1,DIV,0,ARTICLE,0,DIV,2,IMG",
+            "selector": "div.product-grid > article#rice-boiled > div.product-art > img",
+            "boundingRect": {
+              "top": 462,
+              "bottom": 902,
+              "left": 24,
+              "right": 388,
+              "width": 364,
+              "height": 440
+            },
+            "snippet": "<img src=\"/media/products/boiled-rice-26kg.webp\" srcset=\"/media/products/boiled-rice-26kg-480.webp 480w, /media/products/boiled-ric…\" sizes=\"(max-width: 650px) 90vw, 40vw\" alt=\"Valluvar Brand Boiled Rice 26 kg bag\" loading=\"lazy\" width=\"765\" height=\"1024\">",
+            "nodeLabel": "Valluvar Brand Boiled Rice 26 kg bag"
+          }
+        ]
+      },
+      "network-dependency-tree-insight": {
+        "type": "list",
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "560F0BDA9EF83FB114124C2EE9A5E8B2": {
+                  "url": "http://127.0.0.1:4322/rice/",
+                  "navStartToEndTime": 25,
+                  "transferSize": 4074,
+                  "isLongest": true,
+                  "children": {
+                    "3020.5": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 39,
+                      "transferSize": 12239,
+                      "isLongest": true,
+                      "children": {}
+                    },
+                    "3020.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 39,
+                      "transferSize": 14685,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 39
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      },
+      "render-blocking-insight": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedMs",
+            "valueType": "timespanMs",
+            "label": "Duration"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+            "totalBytes": 14685,
+            "wastedMs": 308
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/contact/",
+    "auditedAt": "2026-10-26T02:29:36.026Z",
+    "lighthouseVersion": "12.8.2",
+    "performance": 98,
+    "accessibility": 100,
+    "metrics": {
+      "first-contentful-paint": "1.0 s",
+      "largest-contentful-paint": "1.6 s",
+      "total-blocking-time": "50 ms",
+      "cumulative-layout-shift": "0",
+      "speed-index": "3.7 s"
+    },
+    "issues": [
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "score": 0.99
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "score": 0.85
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "score": 0.72
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0,
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "39DCD3713A161B18152EF02B56148308": {
+                  "url": "http://127.0.0.1:4322/contact/",
+                  "navStartToEndTime": 40,
+                  "transferSize": 5057,
+                  "isLongest": true,
+                  "children": {
+                    "5668.5": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 110,
+                      "transferSize": 12239,
+                      "isLongest": true,
+                      "children": {}
+                    },
+                    "5668.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 109,
+                      "transferSize": 14685,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 110
               }
             }
           },
@@ -842,7 +1227,7 @@
                     "height": 123
                   },
                   "snippet": "<h1 class=\"multiline\">",
-                  "nodeLabel": "One grain.\nA whole world."
+                  "nodeLabel": "Let’s talk\nabout rice."
                 }
               }
             ]
@@ -869,8 +1254,8 @@
             "items": [
               {
                 "phase": "TTFB",
-                "timing": 457.12925,
-                "percent": "26%"
+                "timing": 458.3402,
+                "percent": "29%"
               },
               {
                 "phase": "Load Delay",
@@ -884,8 +1269,8 @@
               },
               {
                 "phase": "Render Delay",
-                "timing": 1282.12925,
-                "percent": "74%"
+                "timing": 1133.3402,
+                "percent": "71%"
               }
             ]
           }
@@ -912,12 +1297,12 @@
               {
                 "subpart": "timeToFirstByte",
                 "label": "Time to first byte",
-                "duration": 8.83
+                "duration": 7.27
               },
               {
                 "subpart": "elementRenderDelay",
                 "label": "Element render delay",
-                "duration": 1258.647
+                "duration": 2356.833
               }
             ]
           },
@@ -935,7 +1320,7 @@
               "height": 123
             },
             "snippet": "<h1 class=\"multiline\">",
-            "nodeLabel": "One grain.\nA whole world."
+            "nodeLabel": "Let’s talk\nabout rice."
           }
         ]
       },
@@ -947,30 +1332,30 @@
             "value": {
               "type": "network-tree",
               "chains": {
-                "5828A4DF1CDE2447E00F9BDCEFB6B513": {
-                  "url": "http://127.0.0.1:4322/journey/",
-                  "navStartToEndTime": 35,
-                  "transferSize": 8589,
+                "39DCD3713A161B18152EF02B56148308": {
+                  "url": "http://127.0.0.1:4322/contact/",
+                  "navStartToEndTime": 40,
+                  "transferSize": 5057,
                   "isLongest": true,
                   "children": {
-                    "6632.5": {
-                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.DdagxuXT.js",
-                      "navStartToEndTime": 45,
-                      "transferSize": 11439,
+                    "5668.5": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 110,
+                      "transferSize": 12239,
                       "isLongest": true,
                       "children": {}
                     },
-                    "6632.4": {
-                      "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-                      "navStartToEndTime": 44,
-                      "transferSize": 13832,
+                    "5668.4": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 109,
+                      "transferSize": 14685,
                       "children": {}
                     }
                   }
                 }
               },
               "longestChain": {
-                "duration": 45
+                "duration": 110
               }
             }
           },
@@ -1015,9 +1400,311 @@
         ],
         "items": [
           {
-            "url": "http://127.0.0.1:4322/_astro/_path_.7PUaRL57.css",
-            "totalBytes": 13832,
-            "wastedMs": 157
+            "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+            "totalBytes": 14685,
+            "wastedMs": 308
+          }
+        ]
+      }
+    }
+  },
+  {
+    "path": "/ta/contact/",
+    "auditedAt": "2026-10-26T02:29:46.509Z",
+    "lighthouseVersion": "12.8.2",
+    "performance": 90,
+    "accessibility": 100,
+    "metrics": {
+      "first-contentful-paint": "0.9 s",
+      "largest-contentful-paint": "1.9 s",
+      "total-blocking-time": "350 ms",
+      "cumulative-layout-shift": "0",
+      "speed-index": "3.6 s"
+    },
+    "issues": [
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "score": 0.98
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "score": 0.87
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "score": 0.73
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "score": 0.23
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "score": 0,
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "2705BB9C31D1662D7BE43B96F5A9B924": {
+                  "url": "http://127.0.0.1:4322/ta/contact/",
+                  "navStartToEndTime": 40,
+                  "transferSize": 5787,
+                  "isLongest": true,
+                  "children": {
+                    "23280.6": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 144,
+                      "transferSize": 12239,
+                      "isLongest": true,
+                      "children": {}
+                    },
+                    "23280.5": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 143,
+                      "transferSize": 14685,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 144
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      }
+    ],
+    "analysis": {
+      "largest-contentful-paint-element": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-0-P",
+                  "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,DIV,1,P",
+                  "selector": "main#main > section.page-heading > div.page-heading-row > p",
+                  "boundingRect": {
+                    "top": 297,
+                    "bottom": 393,
+                    "left": 24,
+                    "right": 388,
+                    "width": 364,
+                    "height": 96
+                  },
+                  "snippet": "<p>",
+                  "nodeLabel": "எங்கள் தாராபுரம் குழுவை அழைக்கவும் அல்லது WhatsApp இல் தொடர்புகொள்ளவும். அரிசி வகை, அளவு மற்றும் சேருமிடத்துடன் மொத்த…"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "phase",
+                "valueType": "text",
+                "label": "Phase"
+              },
+              {
+                "key": "percent",
+                "valueType": "text",
+                "label": "% of LCP"
+              },
+              {
+                "key": "timing",
+                "valueType": "ms",
+                "label": "Timing"
+              }
+            ],
+            "items": [
+              {
+                "phase": "TTFB",
+                "timing": 458.98445,
+                "percent": "24%"
+              },
+              {
+                "phase": "Load Delay",
+                "timing": 0,
+                "percent": "0%"
+              },
+              {
+                "phase": "Load Time",
+                "timing": 0,
+                "percent": "0%"
+              },
+              {
+                "phase": "Render Delay",
+                "timing": 1433.98445,
+                "percent": "76%"
+              }
+            ]
+          }
+        ]
+      },
+      "lcp-breakdown-insight": {
+        "type": "list",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "label",
+                "valueType": "text",
+                "label": "Subpart"
+              },
+              {
+                "key": "duration",
+                "valueType": "ms",
+                "label": "Duration"
+              }
+            ],
+            "items": [
+              {
+                "subpart": "timeToFirstByte",
+                "label": "Time to first byte",
+                "duration": 15.234
+              },
+              {
+                "subpart": "elementRenderDelay",
+                "label": "Element render delay",
+                "duration": 2219.173
+              }
+            ]
+          },
+          {
+            "type": "node",
+            "lhId": "page-0-P",
+            "path": "1,HTML,1,BODY,2,MAIN,0,SECTION,1,DIV,1,P",
+            "selector": "main#main > section.page-heading > div.page-heading-row > p",
+            "boundingRect": {
+              "top": 297,
+              "bottom": 393,
+              "left": 24,
+              "right": 388,
+              "width": 364,
+              "height": 96
+            },
+            "snippet": "<p>",
+            "nodeLabel": "எங்கள் தாராபுரம் குழுவை அழைக்கவும் அல்லது WhatsApp இல் தொடர்புகொள்ளவும். அரிசி வகை, அளவு மற்றும் சேருமிடத்துடன் மொத்த…"
+          }
+        ]
+      },
+      "network-dependency-tree-insight": {
+        "type": "list",
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "2705BB9C31D1662D7BE43B96F5A9B924": {
+                  "url": "http://127.0.0.1:4322/ta/contact/",
+                  "navStartToEndTime": 40,
+                  "transferSize": 5787,
+                  "isLongest": true,
+                  "children": {
+                    "23280.6": {
+                      "url": "http://127.0.0.1:4322/_astro/Layout.astro_astro_type_script_index_0_lang.C2zuIuKW.js",
+                      "navStartToEndTime": 144,
+                      "transferSize": 12239,
+                      "isLongest": true,
+                      "children": {}
+                    },
+                    "23280.5": {
+                      "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+                      "navStartToEndTime": 143,
+                      "transferSize": 14685,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 144
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      },
+      "render-blocking-insight": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "url",
+            "valueType": "url",
+            "label": "URL"
+          },
+          {
+            "key": "totalBytes",
+            "valueType": "bytes",
+            "label": "Transfer Size"
+          },
+          {
+            "key": "wastedMs",
+            "valueType": "timespanMs",
+            "label": "Duration"
+          }
+        ],
+        "items": [
+          {
+            "url": "http://127.0.0.1:4322/_astro/_path_.o3N5Ynu6.css",
+            "totalBytes": 14685,
+            "wastedMs": 309
           }
         ]
       }

@@ -11,8 +11,10 @@ jobs:
     strategy:
       matrix:
         base: ['/', '/ValluvarRiceMill/']
+        review: ['true', 'false']
     env:
       SITE_BASE_PATH: ${{ matrix.base }}
+      PUBLIC_REVIEW_BUILD: ${{ matrix.review }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4

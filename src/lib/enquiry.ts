@@ -27,7 +27,8 @@ export function validateEnquiry(data: Enquiry, locale: Locale): EnquiryErrors {
   return errors;
 }
 export function composeEnquiry(data: Enquiry, locale: Locale) {
-  const product = products.find(p => p.id === data.product)?.name[locale] ?? (locale === 'ta' ? 'தேர்வு செய்ய உதவுங்கள்' : 'Help me choose');
+  const selected = products.find(p => p.id === data.product);
+  const product = selected ? `${selected.name[locale]} · ${selected.packKg} ${locale === 'ta' ? 'கிலோ' : 'kg'}` : (locale === 'ta' ? 'தேர்வு செய்ய உதவுங்கள்' : 'Help me choose');
   const values = [data.name, data.businessName, data.phone, product, `${data.quantity} ${locale === 'ta' ? ({ kg: 'கிலோ', tonnes: 'டன்', bags: 'மூட்டைகள்' }[data.unit]) : data.unit}`, data.destination];
   const labels = locale === 'ta' ? ['பெயர்', 'வணிகம்', 'தொலைபேசி', 'அரிசி', 'அளவு', 'சேருமிடம்'] : ['Name', 'Business', 'Phone', 'Rice', 'Quantity', 'Delivery location'];
   const lines = values.map((value, index) => `${labels[index]}: ${value.trim()}`);

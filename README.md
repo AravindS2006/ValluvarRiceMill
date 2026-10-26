@@ -52,35 +52,41 @@ Undici stays on its Node 22.14-compatible major for Astro's transitive font util
 - Product dialogs and gallery lightboxes use native HTML dialogs. The 3D grain
   has labelled stage buttons and a keyboard-operable rotation range control.
 
-## Client review and launch configuration
+## Production and review configuration
 
-The preview intentionally has `noindex, nofollow` and a blocking `robots.txt`.
-The canonical and sitemap origin defaults to the local preview. To generate
-metadata for another review origin, set `SITE_URL` before building. For example:
+Local builds default to review mode: `noindex, nofollow`, a blocking robots.txt,
+and a preview banner. The GitHub Pages workflow builds in production mode with
+`PUBLIC_REVIEW_BUILD=false`, the configured Pages origin, and its project path.
+Production pages are indexable and have no preview banner; the 404 and legacy
+redirect documents remain noindex. robots.txt and sitemap follow the same base.
+CI validates root/project hosting in both review and production modes.
 
 ```powershell
-$env:SITE_URL = 'https://confirmed-client-domain.example'
+$env:SITE_URL = 'https://aravinds2006.github.io'
+$env:SITE_BASE_PATH = '/ValluvarRiceMill/'
+$env:PUBLIC_REVIEW_BUILD = 'false'
 npm run build
+npm run verify:site
 ```
 
-Before a public launch:
+The client supplied the sales/WhatsApp number **07373566676**. Contact links use
+**+91 73735 66676** (`917373566676` for WhatsApp). The client also supplied the
+Google Maps pin at **10.726222, 77.545359**. Call links, direct WhatsApp, product
+enquiry handoffs, directions, and footer links use this centralized configuration.
+The interactive map loads only when opened, with a direct Maps link always
+available. Opening WhatsApp prepares a message; the buyer still chooses Send.
 
-1. Confirm sales contacts, exact visitor directions, and any additional
-   facility claims. The client confirmed Boiled Rice and Broken Rice in 26 kg
-   bags and supplied both product photographs. The gold bag is Special Rajabogam.
-2. Enter the confirmed international sales number as digits only in
-   `business.whatsapp`. An empty or invalid number keeps the WhatsApp action
-   unavailable and preserves the copy-message fallback.
-3. Set the confirmed public `SITE_URL`, change `business.reviewBuild` to `false`,
-   and deliberately replace `public/robots.txt` for indexing. Revisit the static
-   verifier's review-only `noindex` assertion when making that launch change.
-4. Review Tamil copy with the client, especially preferred product spelling.
-5. Revoke the old OpenAI credential that was embedded in the retired chatbot.
-   It was removed from current source; its historical exposure remains in Git.
-   History was not rewritten.
+The current catalogue is **Special Amark Rajabogam, 26 kg** (gold boiled-rice
+bag) and **Rajabogam Rice, 25 kg** (yellow bag). The second product uses a clearly
+labelled studio mockup and includes the original source photograph in its detail
+view. The earlier Broken Rice entry is retired. Existing `boiled` enquiry links
+are preserved; new second-product links use `rajabogam`.
 
-The website contains no account system, shopping cart, backend, analytics,
-chatbot API, or customer-data storage.
+Keep prices, availability, opening hours, and additional facility claims subject
+to direct business confirmation. The retired browser API key still needs owner
+revocation because deleting it did not invalidate the historic credential.
+The website contains no accounts, checkout, backend, analytics, chatbot API,
+or enquiry storage.
 
 ## Research, media, and verification
 
@@ -91,8 +97,9 @@ chatbot API, or customer-data storage.
 Field backgrounds use excerpts from two user-supplied real films. The source
 films' on-screen credits are retained in the gallery and provenance record;
 they are not documented as recordings of the client's premises. Additional
-stock media is from Pexels. The two product bag photographs are client-supplied
-and show the confirmed products. See the provenance document for the complete
+stock media is from Pexels. The gold bag photograph and yellow bag reference are client-supplied. The yellow
+product card is an AI-assisted studio mockup with the client-requested Tamil text
+correction; the unretouched original is available in its product dialog. See the provenance document for the complete
 six-second trim, reproducible edits, and source-license status.
 Fontsource supplies Fraunces, Manrope, and Noto Sans Tamil locally. Their license
 files are included in their respective npm packages (SIL Open Font License).
@@ -102,7 +109,7 @@ files are included in their respective npm packages (SIL Open Font License).
 The Pages workflow passes its origin and project base from `configure-pages`
 through `SITE_URL` and `SITE_BASE_PATH`, and uses Node 22. Navigation, media,
 captions, responsive images, legacy redirects, metadata, and the sitemap all
-respect the same base. CI checks both root hosting and `/ValluvarRiceMill/`.
+respect the same base. CI checks root and `/ValluvarRiceMill/` in both build modes.
 
 To reproduce the Pages build locally:
 

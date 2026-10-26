@@ -1,0 +1,35 @@
+{
+  "product": "Valluvar Brand Rajabogam Rice",
+  "packKg": 25,
+  "sourceFilename": "codex-clipboard-921bd895-1c19-49ec-b1c2-318f65b8f3b4.png",
+  "sourceSha256": "2f2429e73418874627b31dadd0076b1ede0f7a75a2570b8efe60760e7e51bde5",
+  "mockupSha256": "f6139dcda4b4b17146c7e5a6302edcdd4580e60a44b0629d6ade3edfc6ac9bc3",
+  "correctedCopy": "கருப்பு பழுப்பு நீக்கிய அக்மார்க்",
+  "mockupMethod": "Built-in image_gen studio mockup and precise Tamil text correction. The unretouched source photograph is also available in the product detail view.",
+  "assets": [
+    {
+      "src": "/media/products/rajabogam-25kg-mockup.webp",
+      "width": 765,
+      "height": 1020,
+      "bytes": 170544,
+      "sha256": "224704ef8e069a59c738e6837d1b98397c5261a5371dc0977a0a36a25755b2a4",
+      "alpha": true
+    },
+    {
+      "src": "/media/products/rajabogam-25kg-mockup-480.webp",
+      "width": 480,
+      "height": 640,
+      "bytes": 81996,
+      "sha256": "175d7fa20e46801d375115b2391607ebecf32d2e5e0fce977c82e8c93bc28f74",
+      "alpha": true
+    },
+    {
+      "src": "/media/products/rajabogam-25kg-reference.webp",
+      "width": 482,
+      "height": 642,
+      "bytes": 37138,
+      "sha256": "d75a73c0a370729c33c8836dc0a0c73e42531be1f164086282906cc7004670fb",
+      "alpha": true
+    }
+  ]
+}

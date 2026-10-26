@@ -61,6 +61,14 @@ document.addEventListener('visibilitychange', reconcileVideos);
 reducedMotion.addEventListener('change', () => { videos.forEach(v => v.explicitPlay = false); reconcileVideos(); });
 mobileMedia.addEventListener('change', reconcileVideos);
 
+// Load the third-party map only after an explicit, keyboard-accessible request.
+document.querySelectorAll<HTMLDetailsElement>('[data-location-map]').forEach(details => {
+  details.addEventListener('toggle', () => {
+    const frame = details.querySelector<HTMLIFrameElement>('[data-map-frame]');
+    if (details.open && frame && !frame.hasAttribute('src')) frame.src = frame.dataset.src!;
+  });
+});
+
 const form = document.querySelector<HTMLFormElement>('#enquiry-form');
 if (form) {
   const productInput = form.elements.namedItem('product') as HTMLSelectElement;
