@@ -46,7 +46,8 @@ export const ui = {
     ctaTag: 'LET’S START A CONVERSATION', ctaTitle: 'Good rice.\nBetter connections.',
     ctaBody: 'For retailers, restaurants, and wholesale buyers. Share your requirements and let’s take the next step.',
     footerNote: 'A story of rice, from Dharapuram to your table.',
-    stockNote: 'Field footage is illustrative stock media; it does not depict our own fields or mill.',
+    stockNote: 'Real field footage illustrates rice cultivation; these are not recordings of our own fields or mill.',
+    filmCredits: 'Field films: NiceShotsPH · Prabal Bhowmik. Selected from films supplied for this website. Additional stock imagery: Pexels.',
     preview: 'DESIGN PREVIEW', previewNote: 'Sales contacts are awaiting confirmation.',
     menu: 'Open navigation', skip: 'Skip to content', pause: 'Pause motion', resume: 'Play motion',
     viewJourney: 'Explore the journey', allRice: 'View the collection',
@@ -109,7 +110,8 @@ export const ui = {
     ctaTag: 'ஓர் உரையாடலைத் தொடங்குவோம்', ctaTitle: 'நல்ல அரிசி.\nநல்ல உறவுகள்.',
     ctaBody: 'சில்லறை விற்பனையாளர்கள், உணவகங்கள் மற்றும் மொத்த விற்பனையாளர்களுக்கு. உங்கள் தேவைகளைப் பகிருங்கள்.',
     footerNote: 'தாராபுரத்திலிருந்து உங்கள் உணவு மேசை வரை, அரிசியின் கதை.',
-    stockNote: 'வயல் காட்சிகள் விளக்கத்திற்கான பொதுப் பயன்பாட்டுக் காட்சிகள்; இவை எங்கள் சொந்த வயல்களையோ ஆலையையோ காட்டவில்லை.',
+    stockNote: 'உண்மையான வயல் காட்சிகள் நெல் சாகுபடியை விளக்குகின்றன; இவை எங்கள் சொந்த வயல்களையோ ஆலையையோ பதிவு செய்த காட்சிகள் அல்ல.',
+    filmCredits: 'வயல் படங்கள்: NiceShotsPH · Prabal Bhowmik. இத்தளத்திற்காக வழங்கப்பட்ட படங்களிலிருந்து தேர்ந்தெடுக்கப்பட்டவை. கூடுதல் படங்கள்: Pexels.',
     preview: 'வடிவமைப்பு முன்னோட்டம்', previewNote: 'விற்பனைத் தொடர்புகள் உறுதிப்படுத்தப்பட வேண்டும்.',
     menu: 'வழிசெலுத்தலைத் திற', skip: 'உள்ளடக்கத்திற்குச் செல்ல', pause: 'அசைவை நிறுத்து', resume: 'அசைவை இயக்கு',
     viewJourney: 'பயணத்தை அறியுங்கள்', allRice: 'அரிசி வகைகளைக் காண்க',
@@ -174,5 +176,5 @@ export const stages: { title: Localized; body: Localized; media: 'planting' | 'p
 export const faqs = [
   { q: { en: 'How can I make a wholesale enquiry?', ta: 'மொத்த விற்பனைக்கு எப்படி விசாரிப்பது?' }, a: { en: 'Use the enquiry composer to describe your business, rice preference, quantity, and delivery location. You can copy the prepared message. WhatsApp will be available once the sales number is confirmed.', ta: 'உங்கள் வணிகம், விரும்பும் அரிசி, அளவு மற்றும் சேருமிடத்தை விசாரணைப் படிவத்தில் தெரிவியுங்கள். தயாரான செய்தியை நகலெடுக்கலாம். விற்பனை எண் உறுதிப்படுத்தப்பட்ட பின் WhatsApp வசதி கிடைக்கும்.' } },
   { q: { en: 'Which rice types and pack sizes are offered?', ta: 'எந்த அரிசி வகைகள் மற்றும் பொதி அளவுகள் உள்ளன?' }, a: { en: 'Valluvar Brand Boiled Rice and Broken Rice are presented in 26 kg bags, using client-confirmed product names and photographs. Current availability and pricing are confirmed directly before ordering.', ta: 'வாடிக்கையாளர் உறுதிப்படுத்திய பெயர்களும் புகைப்படங்களும் கொண்ட வள்ளுவர் பிராண்ட் புழுங்கல் அரிசி மற்றும் உடைந்த அரிசி 26 கிலோ மூட்டைகளில் வழங்கப்படுகின்றன. ஆர்டர் செய்வதற்கு முன் தற்போதைய இருப்பையும் விலையையும் நேரடியாக உறுதிப்படுத்தவும்.' } },
-  { q: { en: 'Is the field footage from your own farm?', ta: 'வயல் காட்சிகள் உங்கள் சொந்த வயலிலிருந்து எடுக்கப்பட்டவையா?' }, a: { en: 'The field footage is licensed stock media used to explain the rice lifecycle. It does not depict our own fields or mill.', ta: 'நெற்பயிரின் வாழ்க்கைச் சுழற்சியை விளக்க உரிமம் பெற்ற பொதுப் பயன்பாட்டுக் காட்சிகள் பயன்படுத்தப்பட்டுள்ளன. இவை வாடிக்கையாளரின் சொந்த வயல்களையோ ஆலையையோ காட்டவில்லை.' } },
+  { q: { en: 'Is the field footage from your own farm?', ta: 'வயல் காட்சிகள் உங்கள் சொந்த வயலிலிருந்து எடுக்கப்பட்டவையா?' }, a: { en: 'The real field films supplied for this website and licensed stock imagery illustrate the rice lifecycle. They are not presented as recordings of our own fields or mill.', ta: 'இத்தளத்திற்காக வழங்கப்பட்ட உண்மையான வயல் காட்சிகளும் உரிமம் பெற்ற படங்களும் நெல்லின் வாழ்க்கைச் சுழற்சியை விளக்குகின்றன. இவை எங்கள் சொந்த வயல்களையோ ஆலையையோ பதிவு செய்த காட்சிகளாகக் காட்டப்படவில்லை.' } },
 ];

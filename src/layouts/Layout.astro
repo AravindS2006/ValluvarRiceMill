@@ -29,7 +29,7 @@ const structuredData = { '@context': 'https://schema.org', '@type': 'Organizatio
     {locale === 'ta' && <link rel="preload" href={tamilFont} as="font" type="font/woff2" crossorigin="anonymous" />}
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="alternate" hreflang="en" href={new URL(pathFor(page, 'en'), Astro.site).href} /><link rel="alternate" hreflang="ta" href={new URL(pathFor(page, 'ta'), Astro.site).href} /><link rel="alternate" hreflang="x-default" href={new URL(pathFor(page, 'en'), Astro.site).href} />
-    <meta property="og:type" content="website" /><meta property="og:title" content={`${title} — Valluvar`} /><meta property="og:description" content={description} /><meta property="og:image" content={new URL(assetPath('/media/paddy.webp'), Astro.site).href} /><meta property="og:url" content={canonical} /><meta property="og:locale" content={locale === 'ta' ? 'ta_IN' : 'en_IN'} />
+    <meta property="og:type" content="website" /><meta property="og:title" content={`${title} — Valluvar`} /><meta property="og:description" content={description} /><meta property="og:image" content={new URL(assetPath('/media/cinematic/aerial.webp'), Astro.site).href} /><meta property="og:url" content={canonical} /><meta property="og:locale" content={locale === 'ta' ? 'ta_IN' : 'en_IN'} />
     <meta name="twitter:card" content="summary_large_image" />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   </head>

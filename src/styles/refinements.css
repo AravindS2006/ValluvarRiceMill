@@ -1,4 +1,11 @@
 @layer responsive {
+  .video-shell :is(video, .video-poster) { object-position: var(--video-position, 50% 50%); }
+  .story-film { position: relative; height: clamp(350px, 36vw, 470px); }
+  .story-film .video-toggle { left: 20px; right: auto; bottom: 20px; }
+  .story-inset { z-index: 2; }
+  .film-grid figure { margin: 0; min-width: 0; }
+  .film-grid figcaption { padding-top: 13px; color: var(--muted); font-size: 10px; letter-spacing: .06em; }
+  .film-credits { max-width: 720px; margin-top: 28px; }
   /* Preserve the complete client packaging photographs at every breakpoint. */
   .product-card.has-bag .product-art {
     height: 560px;
@@ -66,6 +73,7 @@
     .company-profile { gap: 40px; }
   }
   @media (max-width: 650px) {
+    .story-film { height: 350px; }
     .product-card.has-bag .product-art { height: 440px; }
     .product-pack { top: 18px; right: 18px; font-size: 9px; }
     .product-dialog-body { grid-template-columns: 1fr; gap: 18px; }
