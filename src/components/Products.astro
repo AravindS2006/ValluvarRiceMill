@@ -6,19 +6,21 @@ const { locale } = Astro.props;
 const c = ui[locale];
 ---
 <div class="product-grid">
-  {products.map((product, index) => <article id={`rice-${product.id}`} class={`product-card has-bag ${product.accent}`}>
+  {products.map((product, index) => <article id={`rice-${product.id}`} class={`product-card has-bag ${product.accent} ${product.mockup ? 'has-mockup' : ''}`}>
     <div class="product-art">
       <span class="product-number">0{index + 1}</span>
       <span class="product-pack">{product.packKg} kg</span>
-      <img src={assetPath(product.image)} srcset={assetSrcset(`${product.imageSmall} 480w, ${product.image} 765w`)} sizes="(max-width: 650px) 90vw, 40vw" alt={locale === 'ta' ? `வள்ளுவர் பிராண்ட் ${t(product.name, locale)} 26 கிலோ மூட்டை` : `Valluvar Brand ${t(product.name, locale)} 26 kg bag`} loading="lazy" width="765" height="1024" />
+      <img src={assetPath(product.image)} srcset={assetSrcset(`${product.imageSmall} 480w, ${product.image} ${product.imageWidth}w`)} sizes="(max-width: 650px) 90vw, 40vw" alt={locale === 'ta' ? `வள்ளுவர் பிராண்ட் ${t(product.name, locale)} ${product.packKg} கிலோ மூட்டை` : `Valluvar Brand ${t(product.name, locale)} ${product.packKg} kg bag`} loading="lazy" width={product.imageWidth} height={product.imageHeight} />
+      {product.mockup && <span class="mockup-label">{c.mockup}</span>}
     </div>
     <div class="product-content"><div><p class="eyebrow">{t(product.subtitle, locale)}</p><h3>{t(product.name, locale)}</h3></div><button class="circle-link" type="button" data-open-dialog={`product-${product.id}`} aria-label={`${c.details}: ${t(product.name, locale)}`}>↗</button></div>
     <dialog id={`product-${product.id}`} class="product-dialog">
       <button type="button" class="dialog-close" data-close-dialog aria-label={c.close}>×</button>
-      <div class="product-dialog-body"><img src={assetPath(product.image)} alt={locale === 'ta' ? `வள்ளுவர் பிராண்ட் ${t(product.name, locale)} 26 கிலோ மூட்டை` : `Valluvar Brand ${t(product.name, locale)} 26 kg bag`} width="765" height="1024" loading="lazy" /><div><span class="eyebrow">{t(product.subtitle, locale)}</span><h2>{t(product.name, locale)}</h2>
+      <div class="product-dialog-body"><img src={assetPath(product.image)} alt={locale === 'ta' ? `வள்ளுவர் பிராண்ட் ${t(product.name, locale)} ${product.packKg} கிலோ மூட்டை` : `Valluvar Brand ${t(product.name, locale)} ${product.packKg} kg bag`} width={product.imageWidth} height={product.imageHeight} loading="lazy" /><div><span class="eyebrow">{t(product.subtitle, locale)}</span><h2>{t(product.name, locale)}</h2>
       <p>{t(product.description, locale)}</p>
       <p class="pack-detail">{c.pack} <strong>{product.packKg} kg</strong></p>
       <a class="button" href={`${pathFor('contact', locale)}?product=${product.id}`}>{c.request}<span aria-hidden="true">↗</span></a></div></div>
+      {product.referenceImage && <details class="packaging-reference"><summary>{c.referencePhoto}</summary><p class="caption">{c.mockupNote}</p><img src={assetPath(product.referenceImage)} alt={c.referencePhoto} width="482" height="642" loading="lazy" /></details>}
     </dialog>
   </article>)}
 </div>

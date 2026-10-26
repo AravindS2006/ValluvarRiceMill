@@ -13,6 +13,7 @@ const files = [];
 async function walk(path) { for (const entry of await readdir(path, { withFileTypes: true })) { const target = join(path, entry.name); if (entry.isDirectory()) await walk(target); else files.push(target); } }
 await walk(root);
 const errors = [];
+const reviewBuild = process.env.PUBLIC_REVIEW_BUILD !== 'false';
 // Validate the actual deliverables, including mobile files that may not be
 // fetched during a desktop review. Film two must never include its first 6s.
 const cinema = JSON.parse(await readFile(join(root, 'media/cinematic/manifest.json'), 'utf8'));
@@ -37,7 +38,9 @@ for (const shot of cinema.assets) {
 const pages = files.filter(file => file.endsWith('.html'));
 for (const file of pages) {
   const content = await readFile(file, 'utf8');
-  if (!content.includes('noindex')) errors.push(`${file}: review build is indexable`);
+  const publicPage = !file.endsWith('404.html') && content.includes('<main id="main">');
+  if ((reviewBuild || !publicPage) && !content.includes('noindex')) errors.push(`${file}: should be noindex`);
+  if (!reviewBuild && publicPage && (!content.includes('content="index, follow"') || content.includes('DESIGN PREVIEW'))) errors.push(`${file}: production metadata or preview state is incorrect`);
   for (const match of content.matchAll(/(?:src|href)="(\/[^"#?]*)(?:[?#][^"]*)?"/g)) {
     const path = decodeURIComponent(match[1]);
     const target = localFile(path, file);
@@ -51,6 +54,8 @@ for (const file of pages) {
     }
   }
 }
+const robots = await readFile(join(root, 'robots.txt'), 'utf8');
+if (reviewBuild ? !robots.includes('Disallow: /') : (!robots.includes('Allow: /') || !robots.includes(`${base}sitemap.xml`))) errors.push('robots.txt does not match the build mode');
 for (const file of files.filter(file => ['.js', '.html', '.json', '.css'].includes(extname(file)))) {
   const content = await readFile(file, 'utf8');
   if (/sk-proj-[A-Za-z0-9_-]{20,}|api\.openai\.com|jquery|googletagmanager|google_translate_element/i.test(content)) errors.push(`${file}: credential or obsolete integration found`);
@@ -59,4 +64,4 @@ for (const path of ['', 'mill', 'journey', 'rice', 'gallery', 'contact']) {
   for (const locale of ['', 'ta']) { const target = join(root, locale, path, 'index.html'); try { await stat(target); } catch { errors.push(`Missing bilingual route ${target}`); } }
 }
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
-console.log(`Verified ${pages.length} HTML pages, deployment base ${base}, local links/assets, ${cinema.assets.length} cinematic edits and mobile variants, bilingual routes, noindex, and absence of legacy integrations or exposed API keys.`);
+console.log(`Verified ${pages.length} HTML pages, deployment base ${base}, ${reviewBuild ? 'review' : 'production'} indexing, local links/assets, ${cinema.assets.length} cinematic edits and mobile variants, bilingual routes, and absence of legacy integrations or exposed API keys.`);

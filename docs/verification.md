@@ -1,5 +1,47 @@
 # Verification report
 
+## Confirmed contacts, products, and production mode — 26 October 2026
+
+- Configured the owner-supplied **07373566676** as **+91 73735 66676** for call
+  links and **917373566676** for WhatsApp. Confirmed English and Tamil direct
+  chats and enquiry messages use this destination. No message was sent.
+- Added the owner's Google Maps place link, exact pin **10.726222, 77.545359**,
+  directions, footer location access, and a keyboard-operable click-to-load map.
+  The embedded map rendered successfully with its pin. Before opening it,
+  the iframe has no source; direct map/directions links remain available.
+- The first product is **Special Amark Rajabogam, 26 kg**, using the user's
+  requested English spelling and unchanged gold photo. The second remains
+  **Rajabogam Rice, 25 kg**, using the corrected yellow studio mockup. Its white
+  Tamil line reads **கருப்பு பழுப்பு நீக்கிய அக்மார்க்**. The original supplied
+  photograph is also available in the native product dialog.
+- **31 tests pass**. Added coverage checks the real sales destination, localized
+  messages, exact map coordinates, replacement-product pack size, and map loading
+  policy. Existing validation, clipboard, playback, and fallback tests pass.
+  Type checking reports **0 errors, warnings, or hints**.
+- Root and `/ValluvarRiceMill/` production/review builds pass static verification
+  for all **17 HTML documents**. Production removes the preview banner, enables
+  indexing, and publishes a sitemap in robots.txt. Review mode stays noindex.
+  The 404 and legacy redirects stay noindex in either mode. CI now covers all
+  four hosting/build-mode combinations.
+- **40 responsive checks** pass: 32 affected English/Tamil root pages plus eight
+  project-path catalogue checks after the first-product rename, at
+  360/390/768/1440px. No horizontal overflow or broken loaded product image.
+- The Rajabogam dialog carries `product=rajabogam` into the enquiry. Prepared
+  English and Tamil messages include **25 kg**, quantity, and destination, and
+  encode correctly into the confirmed WhatsApp link. The UI explicitly says
+  the buyer must review and choose Send in WhatsApp. The Tamil flow also passed
+  under the project URL. Browser warning/error logs were empty.
+- Lighthouse mobile: home **97 performance / 100 accessibility**, Tamil home
+  **95 / 100**, rice **99 / 100**, contact **98 / 100**, Tamil contact **90 / 100**.
+  These are local lab measurements, with maps closed until requested.
+
+Evidence: [catalogue](qa/confirmed-rajabogam-desktop.jpg),
+[dialog](qa/confirmed-rajabogam-dialog.jpg), [map](qa/confirmed-location-map.jpg),
+[responsive pages](qa/confirmed-contact-responsive.json),
+[final product names](qa/confirmed-product-names-responsive.json),
+[Tamil Pages enquiry](qa/confirmed-tamil-enquiry.json),
+[Lighthouse](qa/lighthouse.json), [mockup method and prompts](product-mockup.md).
+
 ## Real cinematic footage update — 26 October 2026
 
 The user-supplied films were reviewed in contact sheets and individual frames

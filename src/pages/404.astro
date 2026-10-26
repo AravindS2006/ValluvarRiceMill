@@ -2,4 +2,4 @@
 import Layout from '../layouts/Layout.astro';
 import { pathFor } from '../data/site';
 ---
-<Layout locale="en" page="home" title="Page not found" description="Find your way back to Valluvar."><section class="section-pad page-heading"><p class="eyebrow">404 / A DIFFERENT PATH</p><h1>Let’s find<br />your way back.</h1><p>This page is not here, but the rice journey continues.</p><a class="button" href={pathFor('home')}>Back to Valluvar <span aria-hidden="true">↗</span></a></section></Layout>
+<Layout locale="en" page="home" title="Page not found" description="Find your way back to Valluvar." noindex><section class="section-pad page-heading"><p class="eyebrow">404 / A DIFFERENT PATH</p><h1>Let’s find<br />your way back.</h1><p>This page is not here, but the rice journey continues.</p><a class="button" href={pathFor('home')}>Back to Valluvar <span aria-hidden="true">↗</span></a></section></Layout>

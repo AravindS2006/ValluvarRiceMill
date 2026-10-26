@@ -1,5 +1,22 @@
 # Media provenance
 
+## Current catalogue update — 26 October 2026
+
+The first product is now named **Special Amark Rajabogam (26 kg)** by explicit
+owner request. Its existing gold bag photograph is unchanged. The owner replaced
+the second product with **Rajabogam Rice (25 kg)** in the supplied yellow bag.
+The blue Broken Rice images below remain historical assets and are no longer
+referenced by the active catalogue.
+
+The yellow bag uses a labelled transparent studio mockup created with the
+built-in image_gen tool. The owner-requested text correction is
+**கருப்பு பழுப்பு நீக்கிய அக்மார்க்**. The complete prompt set, method, output
+paths, and reproduction command are in [product-mockup.md](product-mockup.md).
+The unretouched reference photograph is also shown in its product detail view.
+AI-generated artwork should not be treated as a pixel-exact packaging proof.
+Current asset hashes and dimensions are in
+`public/media/products/rajabogam-25kg-manifest.json`.
+
 Stock media was reviewed on 25 October 2026. On 26 October, the owner supplied
 two additional real field films and requested cinematic excerpts for the site.
 The current field backgrounds use those supplied films. Neither supplied nor

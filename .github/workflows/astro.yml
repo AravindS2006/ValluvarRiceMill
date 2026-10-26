@@ -70,6 +70,7 @@ jobs:
         env:
           SITE_URL: ${{ steps.pages.outputs.origin }}
           SITE_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          PUBLIC_REVIEW_BUILD: "false"
         run: npm run build && npm run verify:site
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact

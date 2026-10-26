@@ -20,8 +20,8 @@ describe('wholesale enquiry', () => {
   });
   it('composes English and Tamil messages without dropping buyer details', () => {
     const english = composeEnquiry(valid, 'en'); const tamil = composeEnquiry(valid, 'ta');
-    expect(english).toContain('Rice: Boiled Rice'); expect(english).toContain('Quantity: 25 bags');
-    expect(tamil).toContain('புழுங்கல் அரிசி'); expect(tamil).toContain('25 மூட்டைகள்');
+    expect(english).toContain('Rice: Special Amark Rajabogam'); expect(english).toContain('Quantity: 25 bags');
+    expect(tamil).toContain('ஸ்பெஷல் அக்மார்க் ராஜபோகம்'); expect(tamil).toContain('25 மூட்டைகள்');
     expect(english).toContain(valid.message); expect(tamil).toContain(valid.destination);
   });
   it('handles help-me-choose and omits an empty optional message', () => {
@@ -36,7 +36,8 @@ describe('wholesale enquiry', () => {
     expect(new URL(link).searchParams.get('text')).toBe(message); expect(new URL(link).pathname).toBe('/919876543210');
   });
   it('only preselects known product identifiers from query strings', () => {
-    expect(selectedProduct('boiled')).toBe('boiled'); expect(selectedProduct('broken')).toBe('broken');
+    expect(selectedProduct('boiled')).toBe('boiled'); expect(selectedProduct('rajabogam')).toBe('rajabogam');
+    expect(selectedProduct('broken')).toBe('choose');
     expect(selectedProduct('rnr')).toBe('choose');
     expect(selectedProduct(null)).toBe('choose'); expect(selectedProduct('<script>')).toBe('choose');
   });

@@ -1,0 +1,18 @@
+---
+import { business, ui, type Locale } from '../data/site';
+import { directionsUrl, mapEmbedUrl } from '../lib/contact';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const c = ui[locale];
+---
+<section class="location-section section-pad" aria-labelledby="location-title">
+  <div class="location-copy"><p class="eyebrow">{c.mapTag}</p><h2 id="location-title">{c.mapTitle}</h2><p>{c.mapBody}</p><address>{business.millName}<br />{locale === 'ta' ? 'பழனி சாலை, ஆச்சியூர் அஞ்சல், தாராபுரம், தமிழ்நாடு' : business.location}</address><div class="location-actions"><a class="button" href={directionsUrl} target="_blank" rel="noopener noreferrer">{c.directions}<span aria-hidden="true">↗</span></a><a class="text-link" href={business.map.url} target="_blank" rel="noopener noreferrer">{c.openMap}<span aria-hidden="true">↗</span></a></div></div>
+  <div class="location-panel">
+    <details class="map-interactive" data-location-map>
+      <summary><svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M32 54s18-19 18-32a18 18 0 0 0-36 0c0 13 18 32 18 32Z" stroke="currentColor" stroke-width="1.5"/><circle cx="32" cy="22" r="6" stroke="currentColor" stroke-width="1.5"/></svg><span>{c.loadMap}</span><span class="map-coordinates">10.726222° N · 77.545359° E</span></summary>
+      <iframe data-map-frame data-src={mapEmbedUrl(locale)} title={c.mapFrameTitle} loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </details>
+    <noscript><style is:inline>.map-interactive{display:none}</style><p><a class="text-link" href={business.map.url} target="_blank" rel="noopener noreferrer">{c.openMap} ↗</a></p></noscript>
+    <p class="caption">{c.mapPrivacy}</p>
+  </div>
+</section>

@@ -62,6 +62,18 @@ describe('media loading and fallback behaviour', () => {
     await mount(); document.querySelector<HTMLButtonElement>('[data-video-toggle]')!.click(); observers[0].emit(video(), .8);
     expect(video().paused).toBe(true);
   });
+  it('loads the map only when opened and reuses the frame when reopened', async () => {
+    // The real destination is covered in contact.test; no external network here.
+    await mount('<details data-location-map><summary>Explore map</summary><iframe data-map-frame data-src="about:blank" title="Mill location"></iframe></details>');
+    const details = document.querySelector<HTMLDetailsElement>('[data-location-map]')!;
+    const frame = document.querySelector<HTMLIFrameElement>('[data-map-frame]')!;
+    expect(frame.hasAttribute('src')).toBe(false);
+    details.open = true; details.dispatchEvent(new Event('toggle'));
+    expect(frame.getAttribute('src')).toBe('about:blank');
+    const loaded = frame.src;
+    details.open = false; details.dispatchEvent(new Event('toggle'));
+    expect(frame.src).toBe(loaded);
+  });
   it('keeps grain stage explanations operable when WebGL is unavailable', async () => {
     preferences.mobile = true;
     await mount(`<div data-scene="grain"><div class="scene-viewport"><canvas></canvas><div data-scene-fallback>Husk, bran, and white endosperm</div><button data-scene-motion><span data-motion-label></span><span aria-hidden="true"></span></button><button data-scene-activate>Explore in 3D</button></div><button data-scene-stage="0" aria-pressed="true">Paddy</button><button data-scene-stage="1" aria-pressed="false">Brown rice</button><p data-stage-description data-descriptions='["Paddy with husk","Brown rice retains bran"]'>Paddy with husk</p></div>`);

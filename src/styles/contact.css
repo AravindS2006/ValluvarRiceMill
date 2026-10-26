@@ -1,0 +1,61 @@
+@layer components {
+  .whatsapp-link { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 12px 18px; background: var(--green); color: var(--ivory); border: 1px solid transparent; border-radius: 3px; font-size: 11px; font-weight: 600; line-height: 1.5; }
+  .whatsapp-link svg { width: 25px; height: 25px; flex: 0 0 auto; }
+  .whatsapp-link:hover { background: #245543; }
+  .whatsapp-floating { position: fixed; right: max(20px, env(safe-area-inset-right)); bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 70; border-radius: 30px; border: 2px solid var(--ivory); box-shadow: 0 4px 20px #112a2426; }
+  .cta-links { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
+  .cta-links .whatsapp-link { border-color: #f7f6ef66; }
+  .contact-quick { display: grid; gap: 18px; margin-top: 28px; }
+  .contact-phone { display: grid; gap: 7px; }
+  .contact-phone > span { font-size: 10px; opacity: .85; }
+  .contact-phone > strong { font-size: clamp(18px, 1.65vw, 24px); font-weight: 500; letter-spacing: .02em; font-variant-numeric: tabular-nums; }
+  .contact-location .whatsapp-link { background: var(--ivory); color: var(--green); justify-self: start; }
+  .footer-phone { display: inline-block; margin-top: 15px; font-weight: 600; }
+  .footer-map { display: inline-block; margin-top: 9px; text-decoration: underline; text-underline-offset: 4px; }
+  .place-directions { margin-top: 22px; }
+  .location-section { display: grid; grid-template-columns: .85fr 1.15fr; gap: 6vw; align-items: start; background: var(--paper); border-block: 1px solid var(--line); }
+  .location-copy h2 { font-size: clamp(34px, 3.5vw, 52px); margin: 20px 0; }
+  .location-copy > p:not(.eyebrow), .location-copy address { font-size: 13px; line-height: 1.9; color: var(--muted); }
+  .location-copy address { font-style: normal; margin-top: 26px; }
+  .location-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 30px; }
+  .location-actions .button { gap: 24px; padding: 16px 22px; }
+  .location-actions .text-link { font-size: 11px; }
+  .map-interactive { border: 1px solid #b8c6b5; background: #e2e8db; }
+  .map-interactive summary { display: grid; justify-items: center; align-content: center; min-height: 360px; padding: 28px; gap: 20px; cursor: pointer; list-style: none; text-align: center; font-size: 13px; }
+  .map-interactive summary::-webkit-details-marker { display: none; }
+  .map-interactive summary::marker { content: ''; }
+  .map-interactive summary svg { width: 64px; height: 64px; }
+  .map-coordinates { font-size: 10px; letter-spacing: .08em; color: var(--muted); }
+  .map-interactive[open] summary { min-height: 70px; display: flex; justify-content: flex-start; padding: 18px 24px; text-align: left; }
+  .map-interactive[open] summary svg { width: 28px; height: 28px; }
+  .map-interactive[open] .map-coordinates { display: none; }
+  .map-interactive iframe { width: 100%; height: 360px; border: 0; display: block; background: #f7f6ef; }
+  .location-panel > .caption { margin-top: 14px; font-size: 10px; }
+  .mockup-label { position: absolute; bottom: 20px; left: 24px; color: var(--muted); font-size: 9px; letter-spacing: .05em; }
+  .packaging-reference { border-top: 1px solid var(--line); margin-top: 28px; padding-top: 18px; font-size: 11px; }
+  .packaging-reference summary { cursor: pointer; padding: 8px 0; }
+  .packaging-reference .caption { margin: 12px 0 20px; font-size: 11px; }
+  .packaging-reference img { max-height: 420px; width: 100%; object-fit: contain; }
+}
+@layer responsive {
+  .product-card.has-mockup .product-art { padding: 28px 40px 44px; background: #efefe3; }
+  .product-card.has-mockup .product-art > img { filter: drop-shadow(0 14px 12px #30482f18); }
+  html:lang(ta) .location-copy h2 { font-size: clamp(29px, 2.8vw, 40px); line-height: 1.4; }
+  @media (max-width: 900px) { .location-section { grid-template-columns: 1fr; gap: 35px; } }
+  @media (max-width: 650px) {
+    .whatsapp-floating { width: 52px; height: 52px; min-height: 52px; padding: 10px; }
+    .whatsapp-floating > span { display: none; }
+    .contact-aside { grid-template-columns: 1fr; }
+    .contact-image { min-height: 0; height: 180px; }
+    .contact-location { padding: 30px; }
+    .contact-location > p:not(.eyebrow) { font-size: 11px; }
+    .contact-phone > strong { font-size: 23px; }
+    .location-copy > p:not(.eyebrow), .location-copy address { font-size: 12px; }
+    .location-actions { gap: 20px; }
+    .map-interactive summary { min-height: 280px; }
+    .map-interactive iframe { height: 320px; }
+    .product-card.has-mockup .product-art { padding: 20px 26px 40px; }
+    .mockup-label { left: 20px; bottom: 16px; font-size: 8px; }
+    .site-footer { padding-bottom: 95px; }
+  }
+}
