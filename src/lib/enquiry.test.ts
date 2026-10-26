@@ -20,7 +20,7 @@ describe('wholesale enquiry', () => {
   });
   it('composes English and Tamil messages without dropping buyer details', () => {
     const english = composeEnquiry(valid, 'en'); const tamil = composeEnquiry(valid, 'ta');
-    expect(english).toContain('Rice: Special Amark Rajabogam'); expect(english).toContain('Quantity: 25 bags');
+    expect(english).toContain('Rice: Special Agmark Rajabogam'); expect(english).toContain('Quantity: 25 bags');
     expect(tamil).toContain('ஸ்பெஷல் அக்மார்க் ராஜபோகம்'); expect(tamil).toContain('25 மூட்டைகள்');
     expect(english).toContain(valid.message); expect(tamil).toContain(valid.destination);
   });
