@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "fields",
+      "filename": "RICE FIELDS with DJI Mavic MiniSe cinematic_1080p.mp4",
+      "sha256": "10703afcea079f2a2b40e21322f4bed9e47afdf831f08089a02314ad18da1db5",
+      "provenance": "User supplied for inclusion in the website; original redistribution license not independently verified.",
+      "screenCredit": "NiceShotsPH",
+      "creditEvidence": "Credit visible in source-film outro.",
+      "excludedOpeningSeconds": 0
+    },
+    {
+      "id": "farming",
+      "filename": "Farming _ Cinematic B Roll Video _ Agriculture_1080p.mp4",
+      "sha256": "a85a65b37a0abce730005c457c7ff9f48c8b97ae366f5996631ec608e4fd1b59",
+      "provenance": "User supplied for inclusion in the website; original redistribution license not independently verified.",
+      "screenCredit": "Prabal Bhowmik",
+      "creditEvidence": "Credit visible in source-film outro.",
+      "excludedOpeningSeconds": 6
+    }
+  ],
+  "assets": [
+    {
+      "name": "aerial",
+      "source": "fields",
+      "ranges": [
+        [
+          20.88,
+          25.6
+        ],
+        [
+          10.32,
+          13.96
+        ]
+      ],
+      "fps": 30,
+      "blend": 0.4,
+      "poster": "/media/cinematic/aerial.webp",
+      "description": "Two genuine drone views across green, irrigated rice fields.",
+      "placements": [
+        "Home hero",
+        "Our Mill panorama",
+        "Gallery film"
+      ],
+      "sourceTimeBasis": "Seconds in the unmodified supplied film",
+      "audio": false,
+      "fastStart": true,
+      "codec": "H.264 / yuv420p",
+      "colourEdits": "None",
+      "motionEdits": "Original forward motion and frame rate; brief optical fades only.",
+      "desktop": {
+        "src": "/media/cinematic/aerial.mp4",
+        "width": 1280,
+        "height": 720,
+        "bytes": 3505183,
+        "crf": 24,
+        "durationSeconds": 7.56,
+        "sha256": "1a477a84f98a454235e9edb281b7199f22bf6b0ea6c2011b781070c6e53f14f4"
+      },
+      "mobile": {
+        "src": "/media/cinematic/aerial-mobile.mp4",
+        "width": 768,
+        "height": 432,
+        "bytes": 904192,
+        "crf": 27,
+        "durationSeconds": 7.56,
+        "sha256": "c3f1c09e492976c9d5852b249f142b0899b3462701d5e75f92c3fe7167a697ba"
+      },
+      "portrait": {
+        "src": "/media/cinematic/aerial-portrait.mp4",
+        "width": 720,
+        "height": 960,
+        "bytes": 1821505,
+        "crf": 26,
+        "durationSeconds": 7.56,
+        "sha256": "f0ee4b1a8d3ae40c99e9ce9503a80bb3755126fe365cbb4eead4f0672ab5294d"
+      },
+      "posterVariants": [
+        {
+          "src": "/media/cinematic/aerial-640.webp",
+          "width": 640,
+          "bytes": 25178
+        },
+        {
+          "src": "/media/cinematic/aerial-960.webp",
+          "width": 960,
+          "bytes": 48380
+        }
+      ],
+      "portraitPoster": "/media/cinematic/aerial-portrait.webp"
+    },
+    {
+      "name": "planting",
+      "source": "farming",
+      "ranges": [
+        [
+          21.2,
+          25.6
+        ]
+      ],
+      "fps": 25,
+      "blend": 0.28,
+      "poster": "/media/cinematic/planting.webp",
+      "description": "Farmers transplanting seedlings in a flooded paddy.",
+      "placements": [
+        "Home story",
+        "Nursery and planting chapter",
+        "Gallery"
+      ],
+      "sourceTimeBasis": "Seconds in the unmodified supplied film",
+      "audio": false,
+      "fastStart": true,
+      "codec": "H.264 / yuv420p",
+      "colourEdits": "None",
+      "motionEdits": "Original forward motion and frame rate; brief optical fades only.",
+      "desktop": {
+        "src": "/media/cinematic/planting.mp4",
+        "width": 1280,
+        "height": 720,
+        "bytes": 497209,
+        "crf": 24,
+        "durationSeconds": 4.12,
+        "sha256": "a8ad3de360198edebb59b88d499044912d4b1ed40202f5c7b5abcff4ead8e884"
+      },
+      "mobile": {
+        "src": "/media/cinematic/planting-mobile.mp4",
+        "width": 768,
+        "height": 432,
+        "bytes": 155187,
+        "crf": 27,
+        "durationSeconds": 4.12,
+        "sha256": "05063a72aa1c7da3672702827cdb3dc5e444a9a545799f063a279537a00f1eed"
+      },
+      "posterVariants": [
+        {
+          "src": "/media/cinematic/planting-640.webp",
+          "width": 640,
+          "bytes": 31496
+        },
+        {
+          "src": "/media/cinematic/planting-960.webp",
+          "width": 960,
+          "bytes": 52044
+        }
+      ]
+    },
+    {
+      "name": "growing",
+      "source": "farming",
+      "ranges": [
+        [
+          37.76,
+          41.48
+        ]
+      ],
+      "fps": 25,
+      "blend": 0.28,
+      "poster": "/media/cinematic/growing.webp",
+      "description": "Young green rice plants growing in water, before heading.",
+      "placements": [
+        "Tillering chapter"
+      ],
+      "sourceTimeBasis": "Seconds in the unmodified supplied film",
+      "audio": false,
+      "fastStart": true,
+      "codec": "H.264 / yuv420p",
+      "colourEdits": "None",
+      "motionEdits": "Original forward motion and frame rate; brief optical fades only.",
+      "desktop": {
+        "src": "/media/cinematic/growing.mp4",
+        "width": 1280,
+        "height": 720,
+        "bytes": 1609062,
+        "crf": 24,
+        "durationSeconds": 3.44,
+        "sha256": "4db65c9f89430b654181a92141ad0d84a54b6356bf1ece81d2161a721dce7026"
+      },
+      "mobile": {
+        "src": "/media/cinematic/growing-mobile.mp4",
+        "width": 768,
+        "height": 432,
+        "bytes": 528508,
+        "crf": 27,
+        "durationSeconds": 3.44,
+        "sha256": "9fe1be6e47e18ca10fc127f597c54624ef324e60e8afde1cc007dd99026bb743"
+      },
+      "posterVariants": [
+        {
+          "src": "/media/cinematic/growing-640.webp",
+          "width": 640,
+          "bytes": 30336
+        },
+        {
+          "src": "/media/cinematic/growing-960.webp",
+          "width": 960,
+          "bytes": 48378
+        }
+      ]
+    },
+    {
+      "name": "ripening",
+      "source": "farming",
+      "ranges": [
+        [
+          48.84,
+          52.72
+        ]
+      ],
+      "fps": 25,
+      "blend": 0.28,
+      "poster": "/media/cinematic/ripening.webp",
+      "description": "Grain-bearing rice panicles moving naturally in the breeze.",
+      "placements": [
+        "Ripening chapter",
+        "Gallery",
+        "Contact still"
+      ],
+      "sourceTimeBasis": "Seconds in the unmodified supplied film",
+      "audio": false,
+      "fastStart": true,
+      "codec": "H.264 / yuv420p",
+      "colourEdits": "None",
+      "motionEdits": "Original forward motion and frame rate; brief optical fades only.",
+      "desktop": {
+        "src": "/media/cinematic/ripening.mp4",
+        "width": 1280,
+        "height": 720,
+        "bytes": 933128,
+        "crf": 24,
+        "durationSeconds": 3.6,
+        "sha256": "ee3ea4b1f61bbac1fb11727093f9960f3b041f0b212c4876754b2e17f9f4092d"
+      },
+      "mobile": {
+        "src": "/media/cinematic/ripening-mobile.mp4",
+        "width": 768,
+        "height": 432,
+        "bytes": 312132,
+        "crf": 27,
+        "durationSeconds": 3.6,
+        "sha256": "2dac53f2ebb44f6ccbe7393a225b358f45ab67f7b17cfda3bc2a35b7430c09a3"
+      },
+      "posterVariants": [
+        {
+          "src": "/media/cinematic/ripening-640.webp",
+          "width": 640,
+          "bytes": 23112
+        },
+        {
+          "src": "/media/cinematic/ripening-960.webp",
+          "width": 960,
+          "bytes": 35232
+        }
+      ]
+    },
+    {
+      "name": "harvest",
+      "source": "farming",
+      "ranges": [
+        [
+          62.56,
+          67.24
+        ],
+        [
+          97.0,
+          102.32
+        ]
+      ],
+      "fps": 25,
+      "blend": 0.32,
+      "poster": "/media/cinematic/harvest.webp",
+      "description": "Rice is gathered by hand, followed by real manual threshing.",
+      "placements": [
+        "Home harvest band",
+        "Harvest and threshing chapter",
+        "Gallery"
+      ],
+      "sourceTimeBasis": "Seconds in the unmodified supplied film",
+      "audio": false,
+      "fastStart": true,
+      "codec": "H.264 / yuv420p",
+      "colourEdits": "None",
+      "motionEdits": "Original forward motion and frame rate; brief optical fades only.",
+      "desktop": {
+        "src": "/media/cinematic/harvest.mp4",
+        "width": 1280,
+        "height": 720,
+        "bytes": 3868910,
+        "crf": 24,
+        "durationSeconds": 9.36,
+        "sha256": "e12ae877399f1bc7ce55854200a246341f9b069cffe0ef228a37f5cac2c31321"
+      },
+      "mobile": {
+        "src": "/media/cinematic/harvest-mobile.mp4",
+        "width": 768,
+        "height": 432,
+        "bytes": 1350071,
+        "crf": 27,
+        "durationSeconds": 9.36,
+        "sha256": "fe79312c43938070a0a4cae266e2e47c0f9fcc06b26feee41bf7bbbc359756b3"
+      },
+      "posterVariants": [
+        {
+          "src": "/media/cinematic/harvest-640.webp",
+          "width": 640,
+          "bytes": 23010
+        },
+        {
+          "src": "/media/cinematic/harvest-960.webp",
+          "width": 960,
+          "bytes": 35336
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,52 @@
 # Verification report
 
+## Real cinematic footage update — 26 October 2026
+
+The user-supplied films were reviewed in contact sheets and individual frames
+before editing. The complete second film is trimmed from 114.13 to **108.13
+seconds**, removing its first six seconds while retaining its remaining audio.
+All website excerpts from that film begin after source second 21. The original
+files are untouched; the full trimmed cut stays in ignored `.cache/edits/`.
+
+- All **11 delivery videos** decode successfully with no errors. Dimensions and
+  durations match the manifest; all website variants have no audio. Source
+  frame rates, original forward motion, and colours are retained. The asset
+  verifier checks content hashes, sizes, permitted source ranges, and fast-start
+  MP4 atom order in CI.
+- `npm run check`: **0 errors, 0 warnings, 0 hints**. All **27 existing tests
+  pass**, covering playback policy, fallback behaviour, enquiry, and paths.
+- Root and `/ValluvarRiceMill/` builds pass all **17 HTML document checks**,
+  including new video files, responsive posters, captions, and navigation.
+- **40 responsive checks** on the affected English and Tamil home, mill,
+  journey, gallery, and contact pages at 360/390/768/1440px found no horizontal
+  overflow, broken loaded images, or media errors.
+- Actual desktop home playback: `cinematic/aerial.mp4`, readyState 4, 1280×720,
+  advancing beyond 5 seconds. The story section automatically starts planting
+  footage and pauses the offscreen hero. Pause/resume controls were exercised.
+- Actual Tamil mobile home playback: `aerial-portrait.mp4`, **720×960**, muted,
+  readyState 4, unpaused. Its matching portrait poster loads without distortion.
+- The mobile growth chapter plays `growing-mobile.mp4`; desktop sticky chapter
+  navigation selects the real ripening footage and updates the current stage.
+- Project-path mobile playback reached **6.2637 seconds**, readyState 4,
+  unpaused and muted, from
+  `/ValluvarRiceMill/media/cinematic/aerial-portrait.mp4`.
+- The project-path planting lightbox loads its new still, closes correctly,
+  and restores focus to its opener. Both film credits are visible in the gallery.
+- Browser warning/error logs were empty. Reduced-motion, Save-Data, blocked
+  autoplay and failure fallback logic remains unchanged and covered by tests.
+- Lighthouse mobile (12.8.2): **English home 97 performance / 100 accessibility;
+  Tamil home 97 / 100; journey 100 / 100**. These are local lab results.
+
+Evidence: [responsive checks](qa/cinematic-responsive.json),
+[encoding checks](qa/cinematic-encoding.json),
+[Pages playback](qa/cinematic-pages-playback.json),
+[Lighthouse](qa/lighthouse.json),
+[edited frame contact sheet](qa/cinematic-edit-contact.jpg),
+[desktop](qa/cinematic-desktop.jpg), [story](qa/cinematic-story.jpg),
+[Tamil mobile](qa/cinematic-tamil-mobile.jpg), [journey](qa/cinematic-journey.jpg).
+
+## Previous product and Pages verification — 25 October 2026
+
 Verified on 25 October 2026 against the local production build, served at
 `http://127.0.0.1:4322/`, plus the project-path preview at
 `http://127.0.0.1:4323/ValluvarRiceMill/`. These fixes are submitted for review;

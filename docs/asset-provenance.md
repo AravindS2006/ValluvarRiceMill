@@ -1,12 +1,67 @@
 # Media provenance
 
-Stock media reviewed and prepared on 25 October 2026. The field videos and
-grain texture are illustrative stock media, not photographs of Valluvar's
-fields, employees, facility, or a particular rice product. Keep that
-distinction in the website's captions and gallery. Client-supplied product
-photographs are documented separately below.
+Stock media was reviewed on 25 October 2026. On 26 October, the owner supplied
+two additional real field films and requested cinematic excerpts for the site.
+The current field backgrounds use those supplied films. Neither supplied nor
+stock field footage is documented as showing Valluvar's fields, employees,
+facility, or a particular rice product. Website captions preserve this
+distinction. Actual client product photographs are documented below.
 
-## License
+## User-supplied cinematic field films — 26 October 2026
+
+| Supplied filename | Screen credit observed in the original outro | Use |
+| --- | --- | --- |
+| `RICE FIELDS with DJI Mavic MiniSe cinematic_1080p.mp4` | NiceShotsPH | Aerial opening, mill panorama, gallery film. |
+| `Farming _ Cinematic B Roll Video _ Agriculture_1080p.mp4` | Prabal Bhowmik | Planting, young rice, ripening panicles, hand harvest and manual threshing. |
+
+These are real recordings supplied by the user for this website. They are not
+AI-generated visuals and are not classified as Pexels assets. The original
+creator credit is retained in the gallery and here. A redistribution license
+or ownership of these two films has not been independently verified; the
+existing review build remains noindex. No claim is made that these scenes
+were filmed in Dharapuram or at this mill. The original films remain outside
+the repository and are not modified.
+
+The second film has a separate full-length cut with **exactly its first six
+seconds removed** at `.cache/edits/farming-first-6-seconds-removed.mp4` (ignored
+by Git). It retains the remaining source picture and audio. Website excerpts
+all start later than original source second 21, so none contains the excluded
+opening, titles, or end credits. This complete cut is not downloaded by visitors.
+
+| Website loop | Original source ranges (seconds) | Placement |
+| --- | --- | --- |
+| `cinematic/aerial` | Film 1: 20.88–25.60, then 10.32–13.96 | Home hero, Our Mill panorama, gallery |
+| `cinematic/planting` | Film 2: 21.20–25.60 | Home story, nursery/planting chapter, gallery |
+| `cinematic/growing` | Film 2: 37.76–41.48 | Tillering chapter |
+| `cinematic/ripening` | Film 2: 48.84–52.72 | Grain filling/ripening chapter, gallery, contact still |
+| `cinematic/harvest` | Film 2: 62.56–67.24, then 97.00–102.32 | Home harvest band, harvest/threshing chapter, gallery |
+
+Edits retain forward movement, source frame rates (30fps aerial / 25fps farm),
+original colour and exposure. There is no synthetic growth, frame interpolation,
+reverse playback, speed change, or new colour grade. Baked-in letterbox borders
+in film 2 are removed (1920×842 at x=0/y=118), followed by proportional cropping
+to 16:9. Crossfades of 0.28–0.40 seconds soften the edit and loop boundaries;
+there are no black fades. The harvest sequence shows gathering before threshing.
+The source film's own photographic colour treatment remains present.
+
+Desktop loops are 1280×720 H.264 CRF24; mobile landscape copies are 768×432
+CRF27. The home hero additionally has a 720×960 portrait CRF26 delivery copy
+and matching portrait poster. Audio is removed from every website loop;
+all have fast-start metadata and yuv420p encoding. 1600/960/640px WebP posters
+provide static fallbacks. Exact sizes, hashes, and edit ranges are recorded in
+`public/media/cinematic/manifest.json`. The labelled educational illustrations
+remain for stages the films do not show, including flowering and milling.
+
+Reproduce with Pillow and imageio-ffmpeg (or supply `--ffmpeg`):
+
+```powershell
+python scripts/cinematic-media.py --fields "path/to/fields.mp4" --farming "path/to/farming.mp4" --trim-full
+```
+
+The `--trim-full` switch creates the separate complete six-second cut. Omit it
+when only recreating website assets. The script never downloads either film.
+
+## Original Pexels assets and license
 
 All four source assets below are published on Pexels under the
 [Pexels License](https://www.pexels.com/license/). The source pages label them

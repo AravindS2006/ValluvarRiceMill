@@ -38,6 +38,9 @@ Undici stays on its Node 22.14-compatible major for Astro's transitive font util
   `src/pages/[legacy].html.ts` and respect the configured deployment base.
 - `src/data/site.ts` holds the bilingual copy, business configuration, product
   confirmation status, FAQs, and lifecycle chapters.
+- `src/data/media.ts` selects real field films for each chapter. The home hero
+  has a separately framed portrait video and poster for mobile. Website-ready
+  excerpts and their exact source ranges are documented in the media manifest.
 - `src/lib/enquiry.ts` validates requirements, prepares bilingual messages,
   and constructs encoded WhatsApp links. It does not send or store enquiries.
 - Three.js is loaded only near the journey illustrations. Video is loaded on
@@ -85,8 +88,12 @@ chatbot API, or customer-data storage.
 - [Media sources, licenses, and reproducible preparation](docs/asset-provenance.md)
 - [Verification and browser evidence](docs/verification.md)
 
-Field footage and grain photography are illustrative stock media. The two
-product bag photographs are client-supplied and show the confirmed products.
+Field backgrounds use excerpts from two user-supplied real films. The source
+films' on-screen credits are retained in the gallery and provenance record;
+they are not documented as recordings of the client's premises. Additional
+stock media is from Pexels. The two product bag photographs are client-supplied
+and show the confirmed products. See the provenance document for the complete
+six-second trim, reproducible edits, and source-license status.
 Fontsource supplies Fraunces, Manrope, and Noto Sans Tamil locally. Their license
 files are included in their respective npm packages (SIL Open Font License).
 

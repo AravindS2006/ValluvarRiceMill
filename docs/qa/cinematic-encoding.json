@@ -1,0 +1,123 @@
+[
+  {
+    "name": "aerial",
+    "variant": "desktop",
+    "durationSeconds": 7.57,
+    "width": 1280,
+    "height": 720,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 3505183
+  },
+  {
+    "name": "aerial",
+    "variant": "mobile",
+    "durationSeconds": 7.57,
+    "width": 768,
+    "height": 432,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 904192
+  },
+  {
+    "name": "aerial",
+    "variant": "portrait",
+    "durationSeconds": 7.57,
+    "width": 720,
+    "height": 960,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 1821505
+  },
+  {
+    "name": "planting",
+    "variant": "desktop",
+    "durationSeconds": 4.12,
+    "width": 1280,
+    "height": 720,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 497209
+  },
+  {
+    "name": "planting",
+    "variant": "mobile",
+    "durationSeconds": 4.12,
+    "width": 768,
+    "height": 432,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 155187
+  },
+  {
+    "name": "growing",
+    "variant": "desktop",
+    "durationSeconds": 3.44,
+    "width": 1280,
+    "height": 720,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 1609062
+  },
+  {
+    "name": "growing",
+    "variant": "mobile",
+    "durationSeconds": 3.44,
+    "width": 768,
+    "height": 432,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 528508
+  },
+  {
+    "name": "ripening",
+    "variant": "desktop",
+    "durationSeconds": 3.6,
+    "width": 1280,
+    "height": 720,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 933128
+  },
+  {
+    "name": "ripening",
+    "variant": "mobile",
+    "durationSeconds": 3.6,
+    "width": 768,
+    "height": 432,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 312132
+  },
+  {
+    "name": "harvest",
+    "variant": "desktop",
+    "durationSeconds": 9.36,
+    "width": 1280,
+    "height": 720,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 3868910
+  },
+  {
+    "name": "harvest",
+    "variant": "mobile",
+    "durationSeconds": 9.36,
+    "width": 768,
+    "height": 432,
+    "audio": false,
+    "decodeExit": 0,
+    "errors": [],
+    "bytes": 1350071
+  }
+]
